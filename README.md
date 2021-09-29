@@ -1,12 +1,12 @@
 ---
 description: >-
-  Lozzax is a complete fork of Lozzax platform which focuses on building tools for
+  Lozzax is a complete fork of Oxen platform which focuses on building tools for
   a more private digital future.
 ---
 
 # 💡 Introduction to Lozzax
 
-**Lozzax** is a complete fork of Lozzax which is a developer platform for privacy tools. Lozzax was our main platform for building Lozzax which totally bears all the features that we solely needed in building our plaform by Using Lozzax's super-powered technology since it has good privacy features, security, decentralisation, and safety.
+**Lozzax** is a complete fork of Oxen which is a developer platform for privacy tools. Oxen was our main platform for building Lozzax which totally bears all the features that we solely needed in building our plaform since it has good privacy features, security, decentralisation, and safety.
 
 This blockchain, network, and technology stack that Lozzax offered made our works more easier since it offers variety of tools, libraries, and direct end-user products which solve some of the most difficult challenges in the digital security space.
 
