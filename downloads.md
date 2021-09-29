@@ -4,38 +4,34 @@ description: You can find all of our Lozzax wallet releases here
 
 # 📁 Downloads
 
-Need some help using our wallets? Check out the [Lozzax wallet guides](using-the-lozzax-blockchain/lozzax-wallet-guides/). You can also find out more about [setting up service nodes](https://docs.Lozzax.xyz/using-the-lozzax-blockchain/lozzax-service-node-guides/full-service-node-setup-guide) and [staking](using-the-lozzax-blockchain/lozzax-service-node-guides/staking-to-shared-service-node.md) from our wallets.
+Need some help using our wallets? Check out the [Lozzax wallet guides](https://github.com/lozzahax/oxen-docs-gitbook/tree/fb206df61e4ac730642d0a1bb3c5abcf08be4ef6/using-the-lozzax-blockchain/lozzax-wallet-guides/README.md). You can also find out more about [setting up service nodes](https://docs.Lozzax.xyz/using-the-lozzax-blockchain/oxen-service-node-guides/full-service-node-setup-guide) and [staking](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md) from our wallets.
 
 ## Lozzax Wallet downloads
 
-The Lozzax GUI Wallet is the most user friendly Lozzax Wallet, and is perfect for beginners or those simply looking to send or store their LOZZAX.
+The Oxen GUI Wallet is the most user friendly Oxen Wallet, and is perfect for beginners or those simply looking to send or store their OXEN.
 
-The CLI wallet is for more advanced users, and offers more tools to interact with the Lozzax blockchain.
+The CLI wallet is for more advanced users, and offers more tools to interact with the Oxen blockchain.
 
-#### Windows
+### Windows
 
-* [Lozzax GUI Wallet](https://github.com/lozzax/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-win.exe) v1.6.0
-* [Lozzax CLI Wallet](https://github.com/lozzax/lozzax-core/releases) \(packaged with Lozzax Core\)
+* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.6.0/oxen-electron-wallet-1.6.0-win.exe) v1.6.0
+* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
 
-#### Linux
+### Linux
 
-* [Lozzax GUI Wallet](https://github.com/lozzax/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-linux.AppImage) v1.6.0
-* [Lozzax CLI Wallet](https://github.com/lozzax/lozzax-core/releases) \(packaged with Lozzax Core\)
+* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.6.0/oxen-electron-wallet-1.6.0-linux.AppImage) v1.6.0
+* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
 
-#### macOS
+### macOS
 
-* [Lozzax GUI Wallet](https://github.com/lozzax/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-mac.dmg) v1.6.0
-* [Lozzax CLI Wallet](https://github.com/lozzax/lozzax-core/releases) \(packaged with Lozzax Core\)
+* [Oxen GUI Wallet](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/download/v1.6.0/oxen-electron-wallet-1.6.0-mac.dmg) v1.6.0
+* [Oxen CLI Wallet](https://github.com/oxen-io/oxen-core/releases) \(packaged with Oxen Core\)
 
-#### Android
+### Android
 
-* [Lozzax Mobile Wallet](https://play.google.com/store/apps/details?id=io.lozzax.wallet)
+* [Oxen Mobile Wallet](https://play.google.com/store/apps/details?id=io.oxen.wallet)
 
-#### iOS
+### iOS
 
-* [Lozzax Mobile Wallet](https://apps.apple.com/app/lozzax-wallet-rangeproof/id1547745078)
-
-
-
-
+* [Oxen Mobile Wallet](https://apps.apple.com/app/oxen-wallet-rangeproof/id1547745078)
 
