@@ -20,8 +20,8 @@ For other operating systems, you can either [build from source](https://github.c
 Pull in the Session Open Group Server executable by running the following commands
 
 ```text
-sudo curl -so /etc/apt/trusted.gpg.d/oxen.gpg https://deb.oxen.io/pub.gpg
-echo "deb https://deb.oxen.io $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/oxen.list
+sudo curl -so /etc/apt/trusted.gpg.d/lozzax.gpg https://deb.lozzax.io/pub.gpg
+echo "deb https://deb.lozzax.io $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/lozzax.list
 sudo apt update
 sudo apt install session-open-group-server
 sudo chown _loki /var/lib/session-open-group-server -R
@@ -102,9 +102,9 @@ systemctl restart session-open-group-server.service
 
 ### Getting help
 
-If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the Oxen [Telegram Group](https://t.me/Oxen_Community). Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Oxen_io), or [Reddit](https://reddit.com/oxen_io).
+If something in this guide doesn't make sense, or if you’re running into issues that you can’t identify on your own, the first place to go would be the Lozzax [Telegram Group](https://t.me/Lozzax_Community). Alternatively, you can find help on our other communication channels: [Twitter](https://twitter.com/Lozzax_io), or [Reddit](https://reddit.com/lozzax_io).
 
 ### Reporting bugs
 
-If you've sought help through our communication channels but have not arrived at a solution for your issue, we recommend opening an issue ticket on the [Session public server](https://github.com/oxen-io/session-open-group-server-legacy/issues) GitHub repository.
+If you've sought help through our communication channels but have not arrived at a solution for your issue, we recommend opening an issue ticket on the [Session public server](https://github.com/lozzax-io/session-open-group-server-legacy/issues) GitHub repository.
 

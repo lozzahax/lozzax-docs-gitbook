@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a list of JSON2.0 RPC calls to be used with Oxen Service Nodes, along with examples of each.
+This is a list of JSON2.0 RPC calls to be used with Lozzax Service Nodes, along with examples of each.
 
 ### get\_quorum\_state
 
@@ -55,7 +55,7 @@ Nodes have been omitted with “...” for brevity in nodes\_to\_test and quorum
 
 ### get\_staking\_requirement
 
-Get the required amount of $OXEN to become an Oxen Service Node at the queried height. For stagenet and testnet values, ensure the daemon is started with the --stagenet or --testnet flags respectively.
+Get the required amount of $LOZZAX to become an Lozzax Service Node at the queried height. For stagenet and testnet values, ensure the daemon is started with the --stagenet or --testnet flags respectively.
 
 **Testnet Example**
 
@@ -86,7 +86,7 @@ Get the required amount of $OXEN to become an Oxen Service Node at the queried h
 
 * Uint64 staking\_requirement
 
-> The staking requirement in Oxen atomic units for the queried height
+> The staking requirement in Lozzax atomic units for the queried height
 
 ### get\_service\_node\_key
 
@@ -198,27 +198,27 @@ Get the metadata currently associated with the queried service node public keys 
 
 * Uint64 Contribution.amount
 
-> The amount of $OXEN in atomic units the contributor has staked.
+> The amount of $LOZZAX in atomic units the contributor has staked.
 
 * Uint64 Contribution.reserved
 
-> The amount of $OXEN in atomic units the contributor has reserved and must fulfill to completely contribute their part to the service node. Amount is equal to reserved once the contributor has fully contributed their part.
+> The amount of $LOZZAX in atomic units the contributor has reserved and must fulfill to completely contribute their part to the service node. Amount is equal to reserved once the contributor has fully contributed their part.
 
 * String Contribution.address
 
-> The $OXEN address that funds must come from to fulfill the contribution requirement.
+> The $LOZZAX address that funds must come from to fulfill the contribution requirement.
 
 * Uint64 total\_contributed
 
-> The total $OXEN currently contributed going towards the staking requirement.
+> The total $LOZZAX currently contributed going towards the staking requirement.
 
 * Uint64 total\_reserved
 
-> The total $OXEN that has been reserved by all contributors. The remaining $OXEN is open for other contributors to increase their stake towards the service node.
+> The total $LOZZAX that has been reserved by all contributors. The remaining $LOZZAX is open for other contributors to increase their stake towards the service node.
 
 * Uint64 portions\_for\_operator
 
-> The operator cut expressed as a value from 0 -&gt; STAKING\_PORTIONS \(defined in oxen/src/cryptonote\_config.h\) which is the fee taken from the service node reward and given to the operator address before rewards are distributed to the contributors.
+> The operator cut expressed as a value from 0 -&gt; STAKING\_PORTIONS \(defined in lozzax/src/cryptonote\_config.h\) which is the fee taken from the service node reward and given to the operator address before rewards are distributed to the contributors.
 
 * Uint64 operator\_address
 

@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This is a list of the oxend daemon RPC calls, their inputs and outputs, and examples of each.
+This is a list of the lozzaxd daemon RPC calls, their inputs and outputs, and examples of each.
 
 Many RPC calls use the daemon's JSON RPC interface while others use their own interfaces, as demonstrated below.
 
-Note: "atomic units" refer to the smallest fraction of 1 $OXEN according to the oxend implementation. **1 $OXEN = 1e12 atomic units.**
+Note: "atomic units" refer to the smallest fraction of 1 $LOZZAX according to the lozzaxd implementation. **1 $LOZZAX = 1e12 atomic units.**
 
 ### JSON RPC Methods:
 
@@ -67,7 +67,7 @@ Note: "atomic units" refer to the smallest fraction of 1 $OXEN according to the 
 
 ## JSON RPC Methods
 
-The majority of oxend RPC calls use the daemon's `json_rpc` interface to request various bits of information. These methods all follow a similar structure, for example:
+The majority of lozzaxd RPC calls use the daemon's `json_rpc` interface to request various bits of information. These methods all follow a similar structure, for example:
 
 ```text
 IP=127.0.0.1
@@ -224,16 +224,16 @@ Outputs:
 * _block\_header_  - A structure containing block header information.
   * _block\_size_  - unsigned int; The block size in bytes.
   * _depth_  - unsigned int; The number of blocks succeeding this block on the blockchain. A larger number means an older block.
-  * _difficulty_  - unsigned int; The strength of the Oxen network
+  * _difficulty_  - unsigned int; The strength of the Lozzax network
   * _hash_  - string; The hash of this block.
   * _height_  - unsigned int; The number of blocks preceding this block on the blockchain.
-  * _major\_version_  - unsigned int; The major version of the Oxen protocol at this block height.
-  * _minor\_version_  - unsigned int; The minor version of the Oxen protocol at this block height.
-  * _nonce_  - unsigned int; a cryptographic random one-time number used in mining a $OXEN block.
+  * _major\_version_  - unsigned int; The major version of the Lozzax protocol at this block height.
+  * _minor\_version_  - unsigned int; The minor version of the Lozzax protocol at this block height.
+  * _nonce_  - unsigned int; a cryptographic random one-time number used in mining a $LOZZAX block.
   * _num\_txes_  - unsigned int; Number of transactions in the block, not counting the coinbase tx.
   * _orphan\_status_  - boolean; Usually  `false`. If  `true`, this block is not part of the longest chain.
   * _prev\_hash_  - string; The hash of the block immediately preceding this block in the chain.
-  * _reward_  - unsigned int; The amount of new    generated in this block and rewarded to the miner. Note: 1 $OXEN = 1e12  atomic units.
+  * _reward_  - unsigned int; The amount of new    generated in this block and rewarded to the miner. Note: 1 $LOZZAX = 1e12  atomic units.
   * _timestamp_  - unsigned int; The unix time at which the block was recorded into the blockchain.
 * _status_  - string; General RPC error code. "OK" means everything looks good.
 * _untrusted_  - boolean; States if the result is obtained using the bootstrap mode, and is therefore not trusted \(`true`\), or when the daemon is fully synced \(`false`\).
@@ -1560,7 +1560,7 @@ Outputs:
   * _id_  - string; Peer id
   * _ip_  - unsigned int; IP address in integer format
   * _last\_seen_  - unsigned int; unix time at which the peer has been seen for the last time
-  * _port_  - unsigned int; TCP port the peer is using to connect to Oxen network.
+  * _port_  - unsigned int; TCP port the peer is using to connect to Lozzax network.
 * _status_  - string; General RPC error code. "OK" means everything looks good. Any other value means that something went wrong.
 * _white\_list_  - array of online  _peer_  structure, as above.
 
@@ -2163,5 +2163,5 @@ $ curl -X POST http://127.0.0.1:18081/update -d '{"command":"check"}' -H 'Conten
 
 ## Sources:
 
-Reworked from [GetMonero.org](https://ww.getmonero.org/resources/developer-guides/daemon-rpc.html) RPC calls for Oxen under their [copyright license](https://ww.getmonero.org/legal/#copyright).
+Reworked from [GetMonero.org](https://ww.getmonero.org/resources/developer-guides/daemon-rpc.html) RPC calls for Lozzax under their [copyright license](https://ww.getmonero.org/legal/#copyright).
 

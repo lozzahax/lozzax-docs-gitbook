@@ -14,7 +14,7 @@ If this is your first time using SSH and the Linux command line, don’t stress.
 
 The first thing you’ll want to do is rent yourself a VPS \(Virtual Private Server\) to host your Mumble voice chat server. You _could_ run the Mumble server from your own computer instead, but if you want the server to stay up 24/7, _without_ having to leave your own PC on all the time, a VPS is the way to go. Mumble’s chat server has extremely low system requirements, so a VPS with any amount of storage and at least 512MB RAM will do the trick — you can find VPSs that meet these requirements for around US$3 a month.
 
-Try [https://www.hetzner.com/cloud](https://www.hetzner.com/cloud), or [https://evolution-host.com/vps-hosting.php](https://evolution-host.com/vps-hosting.php) if you want to pay in $OXEN! When ordering, select Ubuntu 20.04 or Debian 10 as the operating system.
+Try [https://www.hetzner.com/cloud](https://www.hetzner.com/cloud), or [https://evolution-host.com/vps-hosting.php](https://evolution-host.com/vps-hosting.php) if you want to pay in $LOZZAX! When ordering, select Ubuntu 20.04 or Debian 10 as the operating system.
 
 ## Step 2: Prepare your VPS
 
@@ -102,11 +102,11 @@ This is the same command we ran earlier, but this time, pay attention to the lon
 
 Copy this address and provide it to anyone you want to be able to connect to the server — all they have to do is paste the address into the Address field of the Add Server dialog in the Mumble client, add a username and label to identify the server, hit OK, and connect!
 
-Mumble can be [downloaded for free](https://www.mumble.info/) on all major platforms. Anyone that wants to access your secret Mumble server will also need to have Lokinet installed and running. To download and install Lokinet, just head to [https://lokinet.org/](https://lokinet.org/). Additional Lokinet guides can be found back at the [Lokinet guide hub](./) here on Oxen Docs.
+Mumble can be [downloaded for free](https://www.mumble.info/) on all major platforms. Anyone that wants to access your secret Mumble server will also need to have Lokinet installed and running. To download and install Lokinet, just head to [https://lokinet.org/](https://lokinet.org/). Additional Lokinet guides can be found back at the [Lokinet guide hub](./) here on Lozzax Docs.
 
 And that’s it! Only 15 minutes and $3 later, you can now have completely surveillance-free conversations over the internet. We hope to integrate voice features into [Session](../../session/) to make it even easier to access secure voice channels with this level of privacy and security.
 
-In the meantime, though, this Mumble/Lokinet setup is perhaps the most secure voice channel option available. This unique combination of services is just one example of the power of the Oxen tech stack — stay tuned for more guides and articles about what Oxen’s tech can do.
+In the meantime, though, this Mumble/Lokinet setup is perhaps the most secure voice channel option available. This unique combination of services is just one example of the power of the Lozzax tech stack — stay tuned for more guides and articles about what Lozzax’s tech can do.
 
 Have fun!
 

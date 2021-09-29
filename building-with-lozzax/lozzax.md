@@ -16,7 +16,7 @@ Connor is a developer building an online marketplace which sells religious texts
 
 #### Decentralised node communications
 
-Jason is building a decentralised storage protocol which requires a number of nodes to come to consensus to split up some data and each store a piece of that data. He has been using an HTTP-based protocol to allow communication between nodes, but this protocol doesn't provide encryption and uses slow, CPU-intensive polling to fetch information. Jason can use [OxenMQ](https://github.com/lozzax/oxen-mq) to provide an encrypted socket-based connection between all nodes, which will improve performance, security, and responsiveness.   
+Jason is building a decentralised storage protocol which requires a number of nodes to come to consensus to split up some data and each store a piece of that data. He has been using an HTTP-based protocol to allow communication between nodes, but this protocol doesn't provide encryption and uses slow, CPU-intensive polling to fetch information. Jason can use [LozzaxMQ](https://github.com/lozzax/lozzax-mq) to provide an encrypted socket-based connection between all nodes, which will improve performance, security, and responsiveness.   
 
 
 ### Developing with Lozzax: A quickstart guide

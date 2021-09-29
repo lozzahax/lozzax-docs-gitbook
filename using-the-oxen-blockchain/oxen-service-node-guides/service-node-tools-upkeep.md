@@ -2,7 +2,7 @@
 
 ## Service node rewards calculator
 
-A simple calculator to help you estimate the rewards you should receive from operating an Oxen Service Node. Check it out:
+A simple calculator to help you estimate the rewards you should receive from operating an Lozzax Service Node. Check it out:
 
 [https://imaginary.stream/sn/](https://imaginary.stream/sn/)
 

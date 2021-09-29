@@ -1,6 +1,6 @@
 # 🔒 Session
 
-Session is an open-source encrypted messenger powered by Oxen, designed to provide both security and anonymity through metadata minimisation, fully anonymous signup, and secure encryption and networking protocols. Session uses the Oxen Service Node network to route and temporarily store messages.
+Session is an open-source encrypted messenger powered by Lozzax, designed to provide both security and anonymity through metadata minimisation, fully anonymous signup, and secure encryption and networking protocols. Session uses the Lozzax Service Node network to route and temporarily store messages.
 
 ## Why Session?
 
@@ -16,5 +16,5 @@ You can download Session for Windows, macOS, Linux, iOS, or Android [on the Sess
 
 ## Register a Session name
 
-Looking to register a permanent name for your Session ID? Head over to [Using Oxen Name Service](../../using-the-oxen-blockchain/using-oxen-name-system.md).
+Looking to register a permanent name for your Session ID? Head over to [Using Lozzax Name Service](../../using-the-lozzax-blockchain/using-lozzax-name-system.md).
 

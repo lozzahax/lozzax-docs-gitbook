@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This is a list of the oxen-wallet-rpc calls, their inputs and outputs, and examples of each. The program oxen-wallet-rpc replaced the rpc interface that was in simplewallet and then oxen-wallet-cli.
+This is a list of the lozzax-wallet-rpc calls, their inputs and outputs, and examples of each. The program lozzax-wallet-rpc replaced the rpc interface that was in simplewallet and then lozzax-wallet-cli.
 
-All oxen-wallet-rpc methods use the same JSON RPC interface. For example:
+All lozzax-wallet-rpc methods use the same JSON RPC interface. For example:
 
 ```text
 IP=127.0.0.1
@@ -17,7 +17,7 @@ curl \
     -H 'Content-Type: application/json'
 ```
 
-If the oxen-wallet-rpc was executed with the `--rpc-login` argument as `username:password`, then follow this example:
+If the lozzax-wallet-rpc was executed with the `--rpc-login` argument as `username:password`, then follow this example:
 
 ```text
 IP=127.0.0.1
@@ -31,7 +31,7 @@ curl \
     -H 'Content-Type: application/json'
 ```
 
-Note: "atomic units" refer to the smallest fraction of 1 $OXEN according to the oxend implementation. **1 $OXEN = 1e9 atomic units.**
+Note: "atomic units" refer to the smallest fraction of 1 $LOZZAX according to the lozzaxd implementation. **1 $LOZZAX = 1e9 atomic units.**
 
 ### Index of JSON RPC Methods:
 
@@ -124,8 +124,8 @@ Inputs:
 
 Outputs:
 
-* _balance_  - unsigned int; The total balance of the current Oxen-wallet-rpc in session.
-* _unlocked\_balance_  - unsigned int; Unlocked funds are those funds that are sufficiently deep enough in the Oxen blockchain to be considered safe to spend.
+* _balance_  - unsigned int; The total balance of the current Lozzax-wallet-rpc in session.
+* _unlocked\_balance_  - unsigned int; Unlocked funds are those funds that are sufficiently deep enough in the Lozzax blockchain to be considered safe to spend.
 * _multisig\_import\_needed_  - boolean; True if importing multisig data is needed for returning a correct balance.
 * _per\_subaddress_  - array of subaddress information; Balance information for each subaddress in an account.
   * _address\_index_  - unsigned int; Index of the subaddress in the account.
@@ -178,7 +178,7 @@ Inputs:
 
 Outputs:
 
-* _address_  - string; The 95-character hex address string of the oxen-wallet-rpc in session.
+* _address_  - string; The 95-character hex address string of the lozzax-wallet-rpc in session.
 * _addresses_  array of addresses informations
   * _address_  string; The 95-character hex \(sub\)address string.
   * _label_  string; Label of the \(sub\)address
@@ -529,7 +529,7 @@ Inputs: _None_.
 
 Outputs:
 
-* _height_  - unsigned int; The current oxen-wallet-rpc's blockchain height. If the wallet has been offline for a long time, it may need to catch up with the daemon.
+* _height_  - unsigned int; The current lozzax-wallet-rpc's blockchain height. If the wallet has been offline for a long time, it may need to catch up with the daemon.
 
 Example:
 
@@ -546,13 +546,13 @@ $ curl -X POST http://127.0.0.1:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### **transfer**
 
-Send $OXEN to a number of recipients.
+Send $LOZZAX to a number of recipients.
 
 Alias: _None_.
 
 Inputs:
 
-* _destinations_  - array of destinations to receive $OXEN:
+* _destinations_  - array of destinations to receive $LOZZAX:
   * _amount_  - unsigned int; Amount to send to each destination, in  atomic units.
   * _address_  - string; Destination public address.
 * _account\_index_  - unsigned int; \(Optional\) Transfer from this account index. \(Defaults to 0\)
@@ -560,10 +560,10 @@ Inputs:
 * _priority_  - unsigned int; Set a priority for the transaction. Accepted Values are: 0-3 for: default, unimportant, normal, elevated, priority.
 * _mixin_  - unsigned int; Number of outputs from the blockchain to mix with \(0 means no mixing\).
 * _ring\_size_  - unsigned int; Number of outputs to mix in the transaction \(this output + N decoys from the blockchain\).
-* _unlock\_time_  - unsigned int; Number of blocks before the $OXEN can be spent \(0 to not add a lock\).
+* _unlock\_time_  - unsigned int; Number of blocks before the $LOZZAX can be spent \(0 to not add a lock\).
 * _payment\_id_  - string; \(Optional\) Random 32-byte/64-character hex string to identify a transaction.
 * _get\_tx\_key_  - boolean; \(Optional\) Return the transaction key after sending.
-* _do\_not\_relay_  - boolean; \(Optional\) If true, the newly created transaction will not be relayed to the Oxen network. \(Defaults to false\)
+* _do\_not\_relay_  - boolean; \(Optional\) If true, the newly created transaction will not be relayed to the Lozzax network. \(Defaults to false\)
 * _get\_tx\_hex_  - boolean; Return the transaction as hex string after sending \(Defaults to false\)
 * _get\_tx\_metadata_  - boolean; Return the metadata needed to relay the transaction. \(Defaults to false\)
 
@@ -606,18 +606,18 @@ Alias: _None_.
 
 Inputs:
 
-* _destinations_  - array of destinations to receive $OXEN:
+* _destinations_  - array of destinations to receive $LOZZAX:
   * _amount_  - unsigned int; Amount to send to each destination, in  atomic units.
   * _address_  - string; Destination public address.
 * _account\_index_  - unsigned int; \(Optional\) Transfer from this account index. \(Defaults to 0\)
 * _subaddr\_indices_  - array of unsigned int; \(Optional\) Transfer from this set of subaddresses. \(Defaults to 0\)
 * _mixin_  - unsigned int; Number of outputs from the blockchain to mix with \(0 means no mixing\).
 * _ring\_size_  - unsigned int; Sets ringsize to n \(mixin + 1\).
-* _unlock\_time_  - unsigned int; Number of blocks before the $OXEN can be spent \(0 to not add a lock\).
+* _unlock\_time_  - unsigned int; Number of blocks before the $LOZZAX can be spent \(0 to not add a lock\).
 * _payment\_id_  - string; \(Optional\) Random 32-byte/64-character hex string to identify a transaction.
 * _get\_tx\_keys_  - boolean; \(Optional\) Return the transaction keys after sending.
 * _priority_  - unsigned int; Set a priority for the transactions. Accepted Values are: 0-3 for: default, unimportant, normal, elevated, priority.
-* _do\_not\_relay_  - boolean; \(Optional\) If true, the newly created transaction will not be relayed to the Oxen network. \(Defaults to false\)
+* _do\_not\_relay_  - boolean; \(Optional\) If true, the newly created transaction will not be relayed to the Lozzax network. \(Defaults to false\)
 * _get\_tx\_hex_  - boolean; Return the transactions as hex string after sending
 * _new\_algorithm_  - boolean; True to use the new transaction construction algorithm, defaults to false.
 * _get\_tx\_metadata_  - boolean; Return list of transaction metadata needed to relay the transfer later.
@@ -739,7 +739,7 @@ Alias: _sweep\_unmixable_.
 Inputs:
 
 * _get\_tx\_keys_  - boolean; \(Optional\) Return the transaction keys after sending.
-* _do\_not\_relay_  - boolean; \(Optional\) If true, the newly created transaction will not be relayed to the Oxen network. \(Defaults to false\)
+* _do\_not\_relay_  - boolean; \(Optional\) If true, the newly created transaction will not be relayed to the Lozzax network. \(Defaults to false\)
 * _get\_tx\_hex_  - boolean; \(Optional\) Return the transactions as hex string after sending. \(Defaults to false\)
 * _get\_tx\_metadata_  - boolean; \(Optional\) Return list of transaction metadata needed to relay the transfer later. \(Defaults to false\)
 
@@ -782,7 +782,7 @@ Inputs:
 * _priority_  - unsigned int; \(Optional\) Priority for sending the sweep transfer, partially determines fee.
 * _mixin_  - unsigned int; Number of outputs from the blockchain to mix with \(0 means no mixing\).
 * _ring\_size_  - unsigned int; Sets ringsize to n \(mixin + 1\).
-* _unlock\_time_  - unsigned int; Number of blocks before the $OXEN can be spent \(0 to not add a lock\).
+* _unlock\_time_  - unsigned int; Number of blocks before the $LOZZAX can be spent \(0 to not add a lock\).
 * _payment\_id_  - string; \(Optional\) Random 32-byte/64-character hex string to identify a transaction.
 * _get\_tx\_keys_  - boolean; \(Optional\) Return the transaction keys after sending.
 * _below\_amount_  - unsigned int; \(Optional\) Include outputs below this amount.
@@ -833,7 +833,7 @@ Inputs:
 * _priority_  - unsigned int; \(Optional\) Priority for sending the sweep transfer, partially determines fee.
 * _mixin_  - unsigned int; Number of outputs from the blockchain to mix with \(0 means no mixing\).
 * _ring\_size_  - unsigned int; Sets ringsize to n \(mixin + 1\).
-* _unlock\_time_  - unsigned int; Number of blocks before the $OXEN can be spent \(0 to not add a lock\).
+* _unlock\_time_  - unsigned int; Number of blocks before the $LOZZAX can be spent \(0 to not add a lock\).
 * _payment\_id_  - string; \(Optional\) Random 32-byte/64-character hex string to identify a transaction.
 * _get\_tx\_keys_  - boolean; \(Optional\) Return the transaction keys after sending.
 * _key\_image_  - string; Key image of specific output to sweep.
@@ -2022,7 +2022,7 @@ $ curl -X POST http://127.0.0.1:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
   "id": "0",
   "jsonrpc": "2.0",
   "result": {
-    "uri": "oxen:55LTR8KniP4LQGJSPtbYDacR7dz8RBFnsfAKMaMuwUNYX6aQbBcovzDPyrQF9KXF9tVU6Xk3K8no1BywnJX6GvZX8yJsXvt?tx_payment_id=420fa29b2d9a49f5&tx_amount=0.000000000010&recipient_name=el00ruobuob%20Stagenet%20wallet&tx_description=Testing%20out%20the%20make_uri%20function."
+    "uri": "lozzax:55LTR8KniP4LQGJSPtbYDacR7dz8RBFnsfAKMaMuwUNYX6aQbBcovzDPyrQF9KXF9tVU6Xk3K8no1BywnJX6GvZX8yJsXvt?tx_payment_id=420fa29b2d9a49f5&tx_amount=0.000000000010&recipient_name=el00ruobuob%20Stagenet%20wallet&tx_description=Testing%20out%20the%20make_uri%20function."
   }
 }
 ```
@@ -2049,7 +2049,7 @@ Outputs:
 Example:
 
 ```text
-$ curl -X POST http://127.0.0.1:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"parse_uri","params":{"uri":"oxen:55LTR8KniP4LQGJSPtbYDacR7dz8RBFnsfAKMaMuwUNYX6aQbBcovzDPyrQF9KXF9tVU6Xk3K8no1BywnJX6GvZX8yJsXvt?tx_payment_id=420fa29b2d9a49f5&tx_amount=0.000000000010&recipient_name=el00ruobuob%20Stagenet%20wallet&tx_description=Testing%20out%20the%20make_uri%20function."}}' -H 'Content-Type: application/json'
+$ curl -X POST http://127.0.0.1:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","method":"parse_uri","params":{"uri":"lozzax:55LTR8KniP4LQGJSPtbYDacR7dz8RBFnsfAKMaMuwUNYX6aQbBcovzDPyrQF9KXF9tVU6Xk3K8no1BywnJX6GvZX8yJsXvt?tx_payment_id=420fa29b2d9a49f5&tx_amount=0.000000000010&recipient_name=el00ruobuob%20Stagenet%20wallet&tx_description=Testing%20out%20the%20make_uri%20function."}}' -H 'Content-Type: application/json'
 {
   "id": "0",
   "jsonrpc": "2.0",
@@ -2238,7 +2238,7 @@ $ curl -X POST http://localhost:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### **create\_wallet**
 
-Create a new wallet. You need to have set the argument "–wallet-dir" when launching oxen-wallet-rpc to make this work.
+Create a new wallet. You need to have set the argument "–wallet-dir" when launching lozzax-wallet-rpc to make this work.
 
 Alias: _None_.
 
@@ -2264,7 +2264,7 @@ $ curl -X POST http://localhost:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### **open\_wallet**
 
-Open a wallet. You need to have set the argument "–wallet-dir" when launching oxen-wallet-rpc to make this work.
+Open a wallet. You need to have set the argument "–wallet-dir" when launching lozzax-wallet-rpc to make this work.
 
 Alias: _None_.
 
@@ -2613,5 +2613,5 @@ $ curl -X POST http://localhost:18082/json_rpc -d '{"jsonrpc":"2.0","id":"0","me
 
 ### Sources:
 
-Reworked [GetMonero.org](https://ww.getmonero.org/resources/developer-guides/wallet-rpc.html) RPC calls for Oxen under their [copyright license](https://ww.getmonero.org/legal/#copyright).
+Reworked [GetMonero.org](https://ww.getmonero.org/resources/developer-guides/wallet-rpc.html) RPC calls for Lozzax under their [copyright license](https://ww.getmonero.org/legal/#copyright).
 

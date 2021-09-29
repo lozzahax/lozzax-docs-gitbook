@@ -1,14 +1,14 @@
 ---
 description: >-
-  Lokinet is our powerful general-purpose onion router, using Oxen Service Nodes
+  Lokinet is our powerful general-purpose onion router, using Lozzax Service Nodes
   as routers for encrypted data
 ---
 
 # 🌐 Lokinet
 
-Lokinet is a cutting-edge onion router that uses the Oxen Service Node network to relay traffic. Lokinet’s power lies in its ability to route both TCP and UDP traffic via network-layer onion routing — in practical terms, this means that Lokinet can be used for secure, highly anonymised video streaming, voice and video calling, and other high-bandwidth use cases that are impossible using competing onion routers.
+Lokinet is a cutting-edge onion router that uses the Lozzax Service Node network to relay traffic. Lokinet’s power lies in its ability to route both TCP and UDP traffic via network-layer onion routing — in practical terms, this means that Lokinet can be used for secure, highly anonymised video streaming, voice and video calling, and other high-bandwidth use cases that are impossible using competing onion routers.
 
-Of the tools in the Oxen ecosystem, Lokinet has the broadest range of possible applications for developers; if implemented correctly, it allows any new or existing web application to completely anonymize its incoming and outgoing network connections. Developers can also use Lokinet in their applications to access clearnet addresses using exit node functionality. You can read more about exit nodes [here](https://docs.oxen.io/products-built-on-oxen/lokinet/exit-nodes).
+Of the tools in the Lozzax ecosystem, Lokinet has the broadest range of possible applications for developers; if implemented correctly, it allows any new or existing web application to completely anonymize its incoming and outgoing network connections. Developers can also use Lokinet in their applications to access clearnet addresses using exit node functionality. You can read more about exit nodes [here](https://docs.lozzax.io/products-built-on-lozzax/lokinet/exit-nodes).
 
 ## Usage examples
 
@@ -40,13 +40,13 @@ Example: a Mumble \(VoIP chat\) server exists at the .loki address `probably.lok
 
 What’s happening behind the scenes? When a user installs Lokinet, they also install a DNS resolver into the host system. When a .loki TLD is entered into your application, Lokinet will resolve this .loki address, build an anonymised path to the service, and then return a local IP address to your application. Any packets sent to that local IP address will be wrapped and sent down the anonymised path to reach the server hosting the .loki address.
 
-### ONS \(Oxen Name Service\)
+### ONS \(Lozzax Name Service\)
 
 By default, Lokinet addresses are long pseudorandom strings which contain the public key of the Lokinet service, versioning information, and other important protocol information:
 
 dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki
 
-These addresses are difficult for users to remember, and hard for developers to communicate to users. If you want a human-readable name for your application, you can purchase an alphanumeric ONS name to be mapped to your service’s .loki address. This mapping is then stored in the Oxen blockchain. ONS names can be purchased inside the Oxen desktop wallet or CLI wallet.
+These addresses are difficult for users to remember, and hard for developers to communicate to users. If you want a human-readable name for your application, you can purchase an alphanumeric ONS name to be mapped to your service’s .loki address. This mapping is then stored in the Lozzax blockchain. ONS names can be purchased inside the Lozzax desktop wallet or CLI wallet.
 
 ### Lokinet library
 

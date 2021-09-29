@@ -1,8 +1,8 @@
-# 🔡 Using Oxen Name System \(ONS\)
+# 🔡 Using Lozzax Name System \(ONS\)
 
 The following steps can be used to register and update ONS mappings in the CLI wallet. Note that you can access a detailed description of each command within the app, using “help &lt;command\_name&gt;”.
 
-## Purchasing an Oxen Name System record
+## Purchasing an Lozzax Name System record
 
 Purchasing an ONS record in the CLI wallet uses the `ons_buy_mapping` command. All arguments for the `ons_buy_mapping` command are optional except for the `<name>` and `<value>` that the name maps to.
 
@@ -26,7 +26,7 @@ ons_buy_mapping backup_owner=T6U7AaNgN2cARpR7CNHGChGMjsmjq5ffh4hLa4DjUUXtKS3bPy2
 ons_buy_mapping KeeJef 053b6b764388cd6c4d38ae0b3e7492a8ecf0076e270c013bb5693d973045f45254
 ```
 
-## Updating an Oxen Name System record: Wallet executing update is owner of record
+## Updating an Lozzax Name System record: Wallet executing update is owner of record
 
 Updating an ONS record in the CLI wallet uses the `ons_update_mapping` command. All arguments for the `ons_update_mapping` command are optional except the name of the record to update, and at least one field of the record to update \(owner, backup\_owner, or value\). The \[signature\] argument is for deferring updates to the record, and is explained in detail in the next section.
 
@@ -46,7 +46,7 @@ _Note: At this time you can only update Session ID mappings, you cannot yet add 
 ons_update_mapping owner=T6UD8TM1t7mUYmMCHXQ67Kg5jXBwoVxNqGpXctnsLXtGBEFnhq37RQAA8jgqgD9U6QbeNGqAkkVXucXQ5txE6Mrk2aRwpppir backup_owner=T6TEJJRfvhMZbJpRuchJtmQAjuyCUAyYy2yVcc9ySxTHXWgwQkupjUJUQsyCoyYfRGReAY3pgaYxUHwoKEkWNh5o2qe5Btt3x value=0596d2fdc1407490e1bb7cbca3f3674606d3ef9b1d01cf46199ee5c8932d83f40a KeeJef
 ```
 
-## Updating an Oxen Name System Record: Wallet executing is not owner of record\)
+## Updating an Lozzax Name System Record: Wallet executing is not owner of record\)
 
 In this scenario, you have an ONS record that you wish to update, and you’re able to coordinate with the wallet owning the record. The wallet that owns the record can execute this command to generate a signature.
 

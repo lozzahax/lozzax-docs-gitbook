@@ -1,10 +1,10 @@
 # 🛑 Service Node deregistration
 
-Deregistration rules are used to manage the network in a decentralised way by having Oxen Service Nodes police each other's performance, ensuring all operational service nodes are up to date and performing adequately to maintain a healthy network.
+Deregistration rules are used to manage the network in a decentralised way by having Lozzax Service Nodes police each other's performance, ensuring all operational service nodes are up to date and performing adequately to maintain a healthy network.
 
 ## Service node states
 
-Each Oxen Service Node can be in one of four states: awaiting, active, decommissioned or deregistered.
+Each Lozzax Service Node can be in one of four states: awaiting, active, decommissioned or deregistered.
 
 | **State** | **Description** |
 | :--- | :--- |
@@ -15,7 +15,7 @@ Each Oxen Service Node can be in one of four states: awaiting, active, decommiss
 
 ### Decommission and credits
 
-Active Oxen Service Nodes earn "credits" which are then used up during any periods where the service node goes offline \(or otherwise stops meeting network requirements\) to stop a deregistration from occuring. A new service node starts out with `INITIAL_CREDIT`, and then builds up `CREDIT_PER_DAY` for each day the service node remains active, up to a maximum of `DECOMMISSION_MAX_CREDIT`.
+Active Lozzax Service Nodes earn "credits" which are then used up during any periods where the service node goes offline \(or otherwise stops meeting network requirements\) to stop a deregistration from occuring. A new service node starts out with `INITIAL_CREDIT`, and then builds up `CREDIT_PER_DAY` for each day the service node remains active, up to a maximum of `DECOMMISSION_MAX_CREDIT`.
 
 | **Variable** | **Value** |
 | :--- | :--- |
@@ -26,13 +26,13 @@ Active Oxen Service Nodes earn "credits" which are then used up during any perio
 
 **Example**:
 
-If an Oxen Service Node stops sending uptime proofs, a quorum of service nodes will analyse whether the service node has built up enough credits \(at least `MINIMUM`\). If so, instead of submitting a deregistration, the quorum instead submits a decommission. This removes the service node from the list of active service nodes, both for rewards and for any active network duties.
+If an Lozzax Service Node stops sending uptime proofs, a quorum of service nodes will analyse whether the service node has built up enough credits \(at least `MINIMUM`\). If so, instead of submitting a deregistration, the quorum instead submits a decommission. This removes the service node from the list of active service nodes, both for rewards and for any active network duties.
 
 If the service node comes back online \(i.e. starts sending the required performance proofs again\) before its credits run out, a quorum will reinstate the service node using a recommission transaction, which adds the service node back to the bottom of the service node reward list, and resets the node's accumulated credits to 0. If the service node does not come back online within the required number of blocks \(i.e. if the node does not come back online and begin performing as required before its credits are depleted\) then a quorum will send a permanent deregistration transaction to the network, locking that node's stake for 30 days.
 
 ## Testing quorums
 
-A testing quorum is a random set of 10 Oxen Service Nodes that are required to test a portion of the network for uptime proofs and service node IP changes. At each block, a new quorum is formed, and this quorum is required to test 50 service nodes or 1% of the network.
+A testing quorum is a random set of 10 Lozzax Service Nodes that are required to test a portion of the network for uptime proofs and service node IP changes. At each block, a new quorum is formed, and this quorum is required to test 50 service nodes or 1% of the network.
 
 If 7 of the 10 service nodes in a quorum \(a "supermajority"\) vote that a service node is malicious or not meeting the minimum requirements then they will create a `State_Change` transaction to decommission or deregister the service node, or drop it to the bottom of the rewards list.
 
@@ -46,7 +46,7 @@ If 7 of the 10 service nodes in a quorum \(a "supermajority"\) vote that a servi
 
 ## State change transactions
 
-A state change transaction changes the state of an Oxen Service Node. Typically, state change transactions are only created when a quorum comes to a consensus about a given service node's activities or lack thereof.
+A state change transaction changes the state of an Lozzax Service Node. Typically, state change transactions are only created when a quorum comes to a consensus about a given service node's activities or lack thereof.
 
 The only state change transaction that can be created by anyone is the `Register` transaction, which changes the state of a service node from `awaiting` to `active`.
 

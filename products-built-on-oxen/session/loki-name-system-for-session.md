@@ -1,4 +1,4 @@
-# 🔤 Oxen Name Service for Session
+# 🔤 Lozzax Name Service for Session
 
 ## Namespaces
 
@@ -46,15 +46,15 @@ By default all mappings in the Session/Wallet namespace will be preserved foreve
 
 By default names are owned by the wallet address that purchased the name. However, names can also be purchased on behalf of another user. Up to 2 wallet addresses may be specified as the owners of a name. This means up to 2 wallets can update and or transfer ownership of the record.
 
-Once a name it can be transferred to another user's Oxen wallet by specifying the address of that wallet and paying the standard transaction fee to transfer the ownership.
+Once a name it can be transferred to another user's Lozzax wallet by specifying the address of that wallet and paying the standard transaction fee to transfer the ownership.
 
 Updates to mappings can be made at any time by the owner, at the cost of the standard transaction fee to include the new mapping in the blockchain.
 
-Initially, management of all owned names will be possible through the Oxen Desktop Wallet; however we aim to add functionality to register and manage names to Session clients directly in the future.
+Initially, management of all owned names will be possible through the Lozzax Desktop Wallet; however we aim to add functionality to register and manage names to Session clients directly in the future.
 
 ## Cost
 
-Names in the Session/Wallet namespace cost 7 $OXEN to register. We will try to update this cost per hardfork to continue targeting the $5-10 USD range.
+Names in the Session/Wallet namespace cost 7 $LOZZAX to register. We will try to update this cost per hardfork to continue targeting the $5-10 USD range.
 
 ## Privacy
 
@@ -78,7 +78,7 @@ At its core, a typical ONS record from the database looks like:
 * `txid`
 * `prev_txid`
 * `register_height`
-* more fields \(implementation details, see oxen\_name\_system.h\)
+* more fields \(implementation details, see lozzax\_name\_system.h\)
 
 Of which the `name_hashed` and `encrypted_value` fields use some form of encryption or decryption.
 
@@ -112,7 +112,7 @@ Of which the `name_hashed` and `encrypted_value` fields use some form of encrypt
 
 ### Owners
 
-In ONS, an owner of a record has the ability to update information about the record by making a transaction on the Oxen blockchain. Owners are specified when buying a record and in ONS we support 2 types. A standard Ed25519 keypair and an Oxen Wallet address.
+In ONS, an owner of a record has the ability to update information about the record by making a transaction on the Lozzax blockchain. Owners are specified when buying a record and in ONS we support 2 types. A standard Ed25519 keypair and an Lozzax Wallet address.
 
 By default, the wallet is configured to assign itself as the owner of the mapping when purchased.
 

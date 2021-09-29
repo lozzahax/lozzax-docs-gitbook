@@ -1,20 +1,20 @@
 # CLI Wallet setup \(macOS\)
 
-This guide covers installing and configuring the Oxen CLI \(Command Line Interface\) Wallet on macOS.
+This guide covers installing and configuring the Lozzax CLI \(Command Line Interface\) Wallet on macOS.
 
 > If you are new to console or terminal commands and/or would prefer a wallet with buttons and Loki branding, we suggest you download the [GUI Wallet](../../downloads.md).
 
 Before following the guide below, you'll need to download the CLI Wallet for macOS. This guide assumes you are running the latest version of macOS and have Xcode installed.
 
-## Step 1: Opening oxen-wallet-cli and oxend.
+## Step 1: Opening lozzax-wallet-cli and lozzaxd.
 
-To use the `oxen-wallet-cli` we must first have the daemon, `oxend`, up and running. The `oxend` is your node which the `oxen-wallet-cli` broadcasts through. Without the node running the `oxen-wallet-cli` will not be able to operate.
+To use the `lozzax-wallet-cli` we must first have the daemon, `lozzaxd`, up and running. The `lozzaxd` is your node which the `lozzax-wallet-cli` broadcasts through. Without the node running the `lozzax-wallet-cli` will not be able to operate.
 
-Open up the `oxend` file in the folder you extracted the release from. In most cases you will have the following security dialog box pop up.
+Open up the `lozzaxd` file in the folder you extracted the release from. In most cases you will have the following security dialog box pop up.
 
-If the dialog box opens up you will need to allow the `oxend` to open by moving your cursor to the top-left of your screen, clicking the apple logo, and then clicking on system preferences.
+If the dialog box opens up you will need to allow the `lozzaxd` to open by moving your cursor to the top-left of your screen, clicking the apple logo, and then clicking on system preferences.
 
-Once in System Preferences, click on the `Security & Privacy` button, check in this new screen that the `oxend` file was blocked, if it was you should be confident to click “Open Anyway”.
+Once in System Preferences, click on the `Security & Privacy` button, check in this new screen that the `lozzaxd` file was blocked, if it was you should be confident to click “Open Anyway”.
 
 Keep clicking `open` and `allow` to give the software permission to run.
 
@@ -41,18 +41,18 @@ Let the daemon run until the node is completely synced, you will know the node i
 ```text
 **********************************************************************
 
-You are now synchronized with the network. You may now start oxen-wallet-cli.
+You are now synchronized with the network. You may now start lozzax-wallet-cli.
 
 Use the "help" command to see the list of available commands.
 
 **********************************************************************
 ```
 
-Now the daemon is synced we can run the `oxen-wallet-cli` file.
+Now the daemon is synced we can run the `lozzax-wallet-cli` file.
 
-## Step 2: Setting up your oxen-wallet-cli account.
+## Step 2: Setting up your lozzax-wallet-cli account.
 
-If this is your first time opening the `oxen-wallet-cli` it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name `MyWallet`
+If this is your first time opening the `lozzax-wallet-cli` it will request for you to specify a wallet name. For the purposes of this user guide we will use the example name `MyWallet`
 
 ```text
 Specify wallet file name (e.g., MyWallet). If the wallet doesn't exist, it will be created.
@@ -68,7 +68,7 @@ No wallet found with that name. Confirm creation of new wallet named: MyWallet
 (Y/Yes/N/No): Yes
 ```
 
-The `oxen-wallet-cli` has now generated us a wallet called `MyWallet` and is now prompting us for a password for our generated wallet.
+The `lozzax-wallet-cli` has now generated us a wallet called `MyWallet` and is now prompting us for a password for our generated wallet.
 
 > Please note:
 >
@@ -118,11 +118,11 @@ If your display freezes, exit blind with ^C, then run again with --use-english-l
 Enter the number corresponding to the language of your choice: 1
 ```
 
-The `oxen-wallet-cli` will generate and spit out several lines of text. Some of the information that was outputted will only ever show once, therefore it is very important to do this next section properly otherwise we may lose access to our account, thus losing access to our funds.
+The `lozzax-wallet-cli` will generate and spit out several lines of text. Some of the information that was outputted will only ever show once, therefore it is very important to do this next section properly otherwise we may lose access to our account, thus losing access to our funds.
 
 Let’s take a close look at each section of the newly generated wallet:
 
-The text after `Generated new wallet` shows your public address. This address can be shared and will be used to receive $OXEN to your wallet. All Oxen public addresses start with an `L....` and are followed with a string of characters. The public address shown will be your primary address however multiple public addresses can be generated from this primary address.
+The text after `Generated new wallet` shows your public address. This address can be shared and will be used to receive $LOZZAX to your wallet. All Lozzax public addresses start with an `L....` and are followed with a string of characters. The public address shown will be your primary address however multiple public addresses can be generated from this primary address.
 
 You do not need to write down the public address, the command `address` will re-display it whenever required.
 
@@ -136,7 +136,7 @@ The View key address is not to be shared unless you want to show the transaction
 View key: 97d3c27e20818e5e23a6548458b50d4f128a2709c55eb7f9518d0e957a5d2e0d
 ```
 
-The next few lines of text show how to navigate the `oxen-wallet-client`.
+The next few lines of text show how to navigate the `lozzax-wallet-client`.
 
 ```text
 This user guide will look into more detail the commands that can be used within the loki-wallet-client further in the guide.
@@ -168,11 +168,11 @@ inroads joining doorway ticket drying obnoxious algebra tutor
 biplane sack alpine zinger huge duets refer rigid inroads
 ```
 
-The last of the outputs are the account balance, because your wallet does not have any $OXEN in it currently the balance is showing 0.
+The last of the outputs are the account balance, because your wallet does not have any $LOZZAX in it currently the balance is showing 0.
 
-Once we receive a transaction of $OXEN into our wallet the balance will appear as soon as the transaction is confirmed in one block \(usually less than 2 minutes\). Once the transaction has been confirmed over 10 blocks the balance will show in unlocked balance.
+Once we receive a transaction of $LOZZAX into our wallet the balance will appear as soon as the transaction is confirmed in one block \(usually less than 2 minutes\). Once the transaction has been confirmed over 10 blocks the balance will show in unlocked balance.
 
-The unlocked balance is the $OXEN available to be spent/sent to other addresses.
+The unlocked balance is the $LOZZAX available to be spent/sent to other addresses.
 
 ```text
 Starting refresh...

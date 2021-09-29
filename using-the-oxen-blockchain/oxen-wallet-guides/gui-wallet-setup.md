@@ -1,12 +1,12 @@
 # GUI Wallet setup
 
-This document will tell you exactly how to set up and operate the Oxen GUI wallet. You can download the appropriate GUI Wallet for your desktop operating system [here](../../downloads.md).
+This document will tell you exactly how to set up and operate the Lozzax GUI wallet. You can download the appropriate GUI Wallet for your desktop operating system [here](../../downloads.md).
 
 ## **Step 0 \(Windows only\):** Install Electron wallet and allow Defender permissions.
 
 > **Mac and Linux users skip to** [**Step 1**](gui-wallet-setup.md#1-running-the-wallet-for-the-first-time)**.**
 
-Open the executable file we downloaded from the Oxen Github `Oxen.Electron.Wallet.Setup.X.X.X-windows.exe` to start installion.
+Open the executable file we downloaded from the Lozzax Github `Lozzax.Electron.Wallet.Setup.X.X.X-windows.exe` to start installion.
 
 When installing the wallet the Windows Defender SmartScreen will prevent you from opening it unless you give the file permission.
 
@@ -14,11 +14,11 @@ Click `Run anyway` to give the executable permission.
 
 Now run through the installation prompts and then click install.
 
-Once the installation has finalised open the Oxen Wallet by clicking your "Windows" key or the start menu and searching for `oxen electron wallet`.
+Once the installation has finalised open the Lozzax Wallet by clicking your "Windows" key or the start menu and searching for `lozzax electron wallet`.
 
 ## Step 1: Running the Wallet for the first time
 
-Once the installation has finalised open the Oxen Wallet by clicking your "Windows" key or the start menu and searching for `oxen electron wallet`.
+Once the installation has finalised open the Lozzax Wallet by clicking your "Windows" key or the start menu and searching for `lozzax electron wallet`.
 
 Once opened the wallet will need to be configured.
 

@@ -1,8 +1,8 @@
 # Preparing for GUI Wallet setup \(Windows\)
 
-When installing the Oxen Wallet, overzealous antivirus software can sometimes block the wallet or some of its components from functioning, or even delete them entirely. To avoid these issues on Windows, follow the below steps.
+When installing the Lozzax Wallet, overzealous antivirus software can sometimes block the wallet or some of its components from functioning, or even delete them entirely. To avoid these issues on Windows, follow the below steps.
 
-> Note: when you reach Step 6 \(downloading the Oxen Wallet\), ensure you are downloading the Wallet **directly from an official source:** either [here on the Oxen Docs](../../downloads.md), or on the [official Oxen Github releases page](https://github.com/oxen-io/oxen-electron-gui-wallet/releases/).
+> Note: when you reach Step 6 \(downloading the Lozzax Wallet\), ensure you are downloading the Wallet **directly from an official source:** either [here on the Lozzax Docs](../../downloads.md), or on the [official Lozzax Github releases page](https://github.com/lozzax-io/lozzax-electron-gui-wallet/releases/).
 
 For the purposes of this example, our images show how to do this on Windows Defender
 
@@ -27,15 +27,15 @@ For the purposes of this example, our images show how to do this on Windows Defe
 
 ![](../../.gitbook/assets/5.png)
 
-1. Download the latest version of the Oxen Wallet **directly into the Wallet folder**:
+1. Download the latest version of the Lozzax Wallet **directly into the Wallet folder**:
 
 ![](../../.gitbook/assets/6.png)
 
-1. Run the Oxen Wallet installer and select the Wallet folder as the install location:
+1. Run the Lozzax Wallet installer and select the Wallet folder as the install location:
 
 ![](../../.gitbook/assets/7%20%281%29.png)
 
-1. Check your antivirus program’s firewall and ensure all executables named “Oxen xxx” are permitted through the firewall:
+1. Check your antivirus program’s firewall and ensure all executables named “Lozzax xxx” are permitted through the firewall:
 
 ![](../../.gitbook/assets/8.png)
 

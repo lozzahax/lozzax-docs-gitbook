@@ -1,12 +1,12 @@
 ---
-description: Bink was invented by the Oxen team and is Lozzax's revolutionary instant payment system
+description: Bink was invented by the Lozzax team and is Lozzax's revolutionary instant payment system
 ---
 
 # 👁 Blink: Instant transactions
 
 ### What is Blink?
 
-Blink was invented by the Oxen team which is an instant payments mechanism. We’re leveraging the Lozzax Service Node network to confirm transactions before they’re entered into the blockchain, while maintaining the privacy, anonymity, and security you expect from $LOZZAX. Blink is the first and only instant payment solution for a CryptoNote-based privacy coin invented by the Oxen team.
+Blink was invented by the Lozzax team which is an instant payments mechanism. We’re leveraging the Lozzax Service Node network to confirm transactions before they’re entered into the blockchain, while maintaining the privacy, anonymity, and security you expect from $LOZZAX. Blink is the first and only instant payment solution for a CryptoNote-based privacy coin invented by the Lozzax team.
 
 ### How does Blink work?
 

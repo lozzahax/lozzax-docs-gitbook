@@ -6,7 +6,7 @@ description: >-
 
 # 🌐 Lokinet
 
-Lokinet is a cutting-edge onion router developed by the Loki/Oxen that uses the Lozzax Service Node network to relay traffic. Lokinet’s power lies in its ability to route both TCP and UDP traffic via network-layer onion routing — in practical terms, this means that Lokinet can be used for secure, highly anonymised video streaming, voice and video calling, and other high-bandwidth use cases that are impossible using competing onion routers.
+Lokinet is a cutting-edge onion router developed by the Loki/Lozzax that uses the Lozzax Service Node network to relay traffic. Lokinet’s power lies in its ability to route both TCP and UDP traffic via network-layer onion routing — in practical terms, this means that Lokinet can be used for secure, highly anonymised video streaming, voice and video calling, and other high-bandwidth use cases that are impossible using competing onion routers.
 
 Of the tools in the Lozzax ecosystem, Lokinet has the broadest range of possible applications for developers; if implemented correctly, it allows any new or existing web application to completely anonymize its incoming and outgoing network connections. Developers can also use Lokinet in their applications to access clearnet addresses using exit node functionality. You can read more about exit nodes [here](https://docs.lozzax.xyz/products-built-on-lozzax/lokinet/exit-nodes).
 

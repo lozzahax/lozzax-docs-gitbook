@@ -6,7 +6,7 @@ Session follows one of two distinct cases for message routing, depending on the 
 
 ### Asynchronous \(offline\) routing
 
-By default, or when either of the participating clients' statuses is determined as offline \(see Synchronous Routing for how client status is determined\), Session will use asynchronous routing. In asynchronous routing, the sender determines the recipient's swarm by obtaining the deterministic mapping between the recipient's long-term public key and the currently registered Oxen Service Nodes. This information is initially requested from a random service node by the sender and updated whenever the client gets an error message in the response that indicates a missing swarm.
+By default, or when either of the participating clients' statuses is determined as offline \(see Synchronous Routing for how client status is determined\), Session will use asynchronous routing. In asynchronous routing, the sender determines the recipient's swarm by obtaining the deterministic mapping between the recipient's long-term public key and the currently registered Lozzax Service Nodes. This information is initially requested from a random service node by the sender and updated whenever the client gets an error message in the response that indicates a missing swarm.
 
 Once this mapping is determined, the sender creates the message protobuf and packs the protobuf in an envelope with the information to be processed by service nodes: the long-term public key of the recipient, a timestamp, TTL \("time to live"\) and a nonce which proves the completion of the required proof of work. The sender then sends the envelope using an onion request to one or more random service nodes within the target swarm \(in practice, each request is always sent to 3 service nodes to achieve a high degree of redundancy\). These service nodes then propagate the message to the remaining nodes in the swarm, and each service node stores the message for the duration of its specified TTL.
 
@@ -16,7 +16,7 @@ Once this mapping is determined, the sender creates the message protobuf and pac
 
 ### Synchronous \(online\) routing
 
-Session clients include their online status in the encrypted protobuf of any asynchronous message they send. Along with their online status, a sending client also lists an Oxen Service Node in their swarm to which they are listening via onion request.
+Session clients include their online status in the encrypted protobuf of any asynchronous message they send. Along with their online status, a sending client also lists an Lozzax Service Node in their swarm to which they are listening via onion request.
 
 When a Session client receives a message which signals the online status of another client, the receiver sends an onion request to the sender's specified listening node. The recipient also exposes their own listening node to the sender. If this process is successful, both sender and receiver will have knowledge of each others' online status and corresponding listening nodes. Messages may now be sent synchronously through onion requests to the conversing clients' respective listening nodes.
 

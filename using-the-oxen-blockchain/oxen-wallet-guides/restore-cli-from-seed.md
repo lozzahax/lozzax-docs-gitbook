@@ -1,16 +1,16 @@
-# Restoring an Oxen CLI Wallet from seed
+# Restoring an Lozzax CLI Wallet from seed
 
 To fully restore your wallet and be able to view balance and make transactions, having your seed stored will be enough. You don't need your wallet password or other keys to restore the wallet once you have a seed phrase.
 
 ## Step 1: Download and unzip CLI wallet
 
 * [Download](../../downloads.md) the latest release of wallet CLI software for your desired operating system
-* Unzip `oxen-[operating-system]-[platform]-[version].zip` file
+* Unzip `lozzax-[operating-system]-[platform]-[version].zip` file
 
 ## Step 2: Run wallet in restore mode
 
 * Open a [Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe) \(Windows\) or [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator) \(Linux / OSX\) and navigate to the wallet folder
-* Run wallet with `--restore-deterministic-wallet` argument: `./oxen-wallet-cli --restore-deterministic-wallet`
+* Run wallet with `--restore-deterministic-wallet` argument: `./lozzax-wallet-cli --restore-deterministic-wallet`
 
 ## Step 3: Enter wallet name
 
@@ -37,7 +37,7 @@ If you don't know a specific blockchain height, press \[Enter\] for scanning fro
 For refresh process to start, you need to have your daemon running. Another option would be to use a remote node. For that, use the following command, replacing and with the host and port number of the remote node you are connecting to:
 
 ```text
-./oxen-wallet-cli --daemon-address <host>:<port>
+./lozzax-wallet-cli --daemon-address <host>:<port>
 ```
 
 Once refresh is done, you can use your full functioning restored wallet. Your public wallet address will remain the same.

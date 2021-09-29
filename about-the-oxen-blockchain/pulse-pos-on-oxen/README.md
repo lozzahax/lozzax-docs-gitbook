@@ -1,18 +1,18 @@
 ---
-description: Pulse is Oxen's Proof of Stake consensus mechanism
+description: Pulse is Lozzax's Proof of Stake consensus mechanism
 ---
 
-# 💓 Pulse: PoS on Oxen
+# 💓 Pulse: PoS on Lozzax
 
-Fundamentally, every blockchain — including Oxen — is exactly what it says in the name: a chain of blocks. One 'block' in the Oxen blockchain is made up of a set of $OXEN transactions which have been deemed valid by the network. But when the network consists of thousands of computers all over the world, how does it come to consensus about the state of the blockchain?
+Fundamentally, every blockchain — including Lozzax — is exactly what it says in the name: a chain of blocks. One 'block' in the Lozzax blockchain is made up of a set of $LOZZAX transactions which have been deemed valid by the network. But when the network consists of thousands of computers all over the world, how does it come to consensus about the state of the blockchain?
 
 That's where Pulse comes in.
 
-Pulse is Oxen's implementation of the 'Proof of Stake' consensus mechanism, and it forms the foundation of the Oxen Service Node network. Let's dive into how it works and why we use it.
+Pulse is Lozzax's implementation of the 'Proof of Stake' consensus mechanism, and it forms the foundation of the Lozzax Service Node network. Let's dive into how it works and why we use it.
 
 ## Proof of Stake: How does it work?
 
-In our Proof of Stake \(PoS\) consensus system, active Oxen Service Nodes are randomly selected to create and publish new blocks of transactions to the blockchain approximately every 2 minutes, with each node being rewarded for doing so.
+In our Proof of Stake \(PoS\) consensus system, active Lozzax Service Nodes are randomly selected to create and publish new blocks of transactions to the blockchain approximately every 2 minutes, with each node being rewarded for doing so.
 
 Once a service node has been selected to create a block, a set of other nodes \(the _validators_\) are chosen to validate the new block — checking to ensure it doesn't contain duplicate transactions or any other potentially malicious activity. Once these validator nodes have verified the block’s legitimacy, the block is published to the blockchain.
 

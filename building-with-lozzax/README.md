@@ -6,9 +6,9 @@ description: >-
 
 # ⚒️ Building with Lozzax
 
-The Oxen technology stack comprises many individual components which can be used either on their own or together with other parts of the stack to build applications and services that provide _next-level_  privacy, security, decentralisation, and anonymity to users seeking these attributes in a world where monitoring, surveillance, and censorship are ever-increasing.
+The Lozzax technology stack comprises many individual components which can be used either on their own or together with other parts of the stack to build applications and services that provide _next-level_  privacy, security, decentralisation, and anonymity to users seeking these attributes in a world where monitoring, surveillance, and censorship are ever-increasing.
 
-It can be a bit difficult to see how the pieces of the Oxen stack fit together to create a cohesive vision for the decentralised, private future of the web. This page provides some examples of the ways in which Oxen’s technologies can be applied to build exciting, innovative, and meaningful applications and services. The projects below are only a few examples of the ✨ **limitless possibilities** ✨ enabled by the Oxen technology stack. Let’s dive in.
+It can be a bit difficult to see how the pieces of the Lozzax stack fit together to create a cohesive vision for the decentralised, private future of the web. This page provides some examples of the ways in which Lozzax’s technologies can be applied to build exciting, innovative, and meaningful applications and services. The projects below are only a few examples of the ✨ **limitless possibilities** ✨ enabled by the Lozzax technology stack. Let’s dive in.
 
 | Project | Description |
 | :--- | :--- |

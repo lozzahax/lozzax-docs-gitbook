@@ -1,12 +1,12 @@
 # CLI Wallet commands
 
-## Oxen CLI Wallet commands
+## Lozzax CLI Wallet commands
 
-The Oxen CLI wallet is based on wallet first developed by Monero. The Oxen wallet includes additional commands on top of the standard `monero-wallet-cli` commands, and this document goes through all the Oxen and Monero CLI commands available within `oxen-wallet-cli`.
+The Lozzax CLI wallet is based on wallet first developed by Monero. The Lozzax wallet includes additional commands on top of the standard `monero-wallet-cli` commands, and this document goes through all the Lozzax and Monero CLI commands available within `lozzax-wallet-cli`.
 
 ### Displaying commands
 
-The `oxen-wallet-cli` has multiple commands to conduct different operations on the Oxen Blockchain. Typing `help` and pressing Enter after loading your wallet will bring up the commands that can be used.
+The `lozzax-wallet-cli` has multiple commands to conduct different operations on the Lozzax Blockchain. Typing `help` and pressing Enter after loading your wallet will bring up the commands that can be used.
 
 ### 1 Accounts
 
@@ -64,7 +64,7 @@ After running the command a similar output shown below will be on your terminal.
 
 #### 1.3 Changing account labels
 
-To change the label name connected to a specific Oxen Primary or Sub-address use the command:
+To change the label name connected to a specific Lozzax Primary or Sub-address use the command:
 
 ```text
 account label <index> <label text with white spaces allowed>
@@ -95,7 +95,7 @@ Using the command `account label 0 My Account` we have changed the label connect
 
 #### 1.4 Tagging and untagging accounts:
 
-The `oxen-wallet-cli` allows you to group accounts by tagging or untagging them.
+The `lozzax-wallet-cli` allows you to group accounts by tagging or untagging them.
 
 Below shows a wallet with 4 accounts, Dog, Kid 1 and Kid 2.
 
@@ -274,9 +274,9 @@ For example:
 
 ### 5 Reserve Proof
 
-Reserve Proofs are used to generate a signature proving that you own an amount of $OXEN, with the option to sign the reserve proof with a key.
+Reserve Proofs are used to generate a signature proving that you own an amount of $LOZZAX, with the option to sign the reserve proof with a key.
 
-For example let’s imagine you see a car for sale but they will accept $OXEN as payment, however they have advised in their online listing that they are only interested in serious buyers and require you to prove you have the $OXEN. Luckily we can use Reserve Proof commands for this proof.
+For example let’s imagine you see a car for sale but they will accept $LOZZAX as payment, however they have advised in their online listing that they are only interested in serious buyers and require you to prove you have the $LOZZAX. Luckily we can use Reserve Proof commands for this proof.
 
 #### 5.1 Generate Reserve Proof
 
@@ -286,7 +286,7 @@ To begin we will need to run the `get_reserve_proof` command to generate our pro
 get_reserve_proof (all|<amount>) [<message>]
 ```
 
-If the individual you are sending this proof to requires you to prove you have 1000 $OXEN you will need to replace the section `(all|<amount>)` with a 1000, otherwise replace it with the amount you need to prove you have reserved. If you want to put an extra layer of encryption over the file replace `[<message>]` with a password.
+If the individual you are sending this proof to requires you to prove you have 1000 $LOZZAX you will need to replace the section `(all|<amount>)` with a 1000, otherwise replace it with the amount you need to prove you have reserved. If you want to put an extra layer of encryption over the file replace `[<message>]` with a password.
 
 Your command will similar to the below command:
 
@@ -299,53 +299,53 @@ The CLI will request your wallet password and once your password is entered it w
 ```text
 [wallet T6TmZX]: get_reserve_proof 1000 Car
 Wallet password:
-signature file saved to: oxen_reserve_proof
+signature file saved to: lozzax_reserve_proof
 ```
 
-This signature file `oxen_reserve_proof` will be saved in your Oxen folder, where your daemon and wallet keys are. Keep in mind every time you run the `get_reserve_proof` command it will overwrite your`oxen_reserve_proof` file.
+This signature file `lozzax_reserve_proof` will be saved in your Lozzax folder, where your daemon and wallet keys are. Keep in mind every time you run the `get_reserve_proof` command it will overwrite your`lozzax_reserve_proof` file.
 
-You will want to send this file to the person who requires the proof. You can upload the `oxen_reserve_proof` file through [https://transfer.sh/](https://transfer.sh/) by running the command within the folder of your signature file:
+You will want to send this file to the person who requires the proof. You can upload the `lozzax_reserve_proof` file through [https://transfer.sh/](https://transfer.sh/) by running the command within the folder of your signature file:
 
 ```text
-curl --upload-file ./oxen_reserve_proof https://transfer.sh/oxen_reserve_proof`
+curl --upload-file ./lozzax_reserve_proof https://transfer.sh/lozzax_reserve_proof`
 ```
 
 The terminal will then print out a link to your signature file which you can then provide to the individual performing the check.
 
 ```text
-https://transfer.sh/QhoC7/oxen_reserve_proof
+https://transfer.sh/QhoC7/lozzax_reserve_proof
 ```
 
 Make sure you provide the following to the individual who will be checking your reserve proof:
 
-* The oxen\_reserve\_proof file through the transfer.sh link.
-* The Oxen address you are proving has $OXEN in it.
+* The lozzax\_reserve\_proof file through the transfer.sh link.
+* The Lozzax address you are proving has $LOZZAX in it.
 * The `<message>` if you encrypted the file.
 
 #### 5.2 Checking Reserve Proof
 
-To check a reserve proof we need to first have the `oxen_reserve_proof` file in our Oxen folder.
+To check a reserve proof we need to first have the `lozzax_reserve_proof` file in our Lozzax folder.
 
-If you do not have the `oxen_reserve_proof` file in your Oxen folder request the individual sending the file to you to use [https://transfer.sh/](https://transfer.sh/), once they send you the link to their `oxen_reserve_proof` you can use the following command to download it.
+If you do not have the `lozzax_reserve_proof` file in your Lozzax folder request the individual sending the file to you to use [https://transfer.sh/](https://transfer.sh/), once they send you the link to their `lozzax_reserve_proof` you can use the following command to download it.
 
 ```text
-curl <link> -o oxen_reserve_proof
+curl <link> -o lozzax_reserve_proof
 ```
 
-Replacing `<link>` with the link to download the `oxen_reserve_proof`.
+Replacing `<link>` with the link to download the `lozzax_reserve_proof`.
 
-Now that the `oxen_reserve_proof` is in our folder we can run the following command:
+Now that the `lozzax_reserve_proof` is in our folder we can run the following command:
 
 ```text
 check_reserve_proof <address> <signature_file> [<message>]
 ```
 
-Where `<address>` is the address of the wallet where the command get\_reserve\_proof was ran. `<signature_file>` is the file that was received from the individual sending you the reserve proof, normally generated as `oxen_reserve_proof` and `<message>` is the key set by the individual who sent you the reserve proof.
+Where `<address>` is the address of the wallet where the command get\_reserve\_proof was ran. `<signature_file>` is the file that was received from the individual sending you the reserve proof, normally generated as `lozzax_reserve_proof` and `<message>` is the key set by the individual who sent you the reserve proof.
 
-Therefor for the previous example where we created a reserve proof for 1000 $OXEN and signed with “car”, we would run the command:
+Therefor for the previous example where we created a reserve proof for 1000 $LOZZAX and signed with “car”, we would run the command:
 
 ```text
-check_reserve_proof T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7 oxen_reserve_proof Car
+check_reserve_proof T6TmZX8EzZVjS9zNg7zAsrEQFDgcVC2qV2ZMyoWsbyK4SNB2SwMHZtMhPSsFyTmRBQUaGVF5k3qy5CMFM6Lvj7gi3AeszDag7 lozzax_reserve_proof Car
 ```
 
 If all goes well, the terminal will output the following:
@@ -360,7 +360,7 @@ You may note that it shows a reserve proof which is greater than 1000, this is b
 
 Spend Proofs are used to generate a signature proving that you generated a TXID, with the option to sign the spend proof with a key.
 
-For example let’s imagine you have bought a car from a dealership with $OXEN and have sent 1000 $OXEN to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 $OXEN in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the `get_spend_proof` command.
+For example let’s imagine you have bought a car from a dealership with $LOZZAX and have sent 1000 $LOZZAX to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 $LOZZAX in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the `get_spend_proof` command.
 
 #### 6.1 Generate Spend Proof
 
@@ -381,53 +381,53 @@ get_spend_proof <txid> [<message>]
 Replacing `<txid>` with the txid of our transfer out and replacing `<message>` if we want to add a password to the proof. If all went well the terminal will output the following text:
 
 ```text
-signature file saved to: oxen_spend_proof
+signature file saved to: lozzax_spend_proof
 ```
 
-This signature file `oxen_spend_proof` will be saved in your Oxen folder, where your daemon and wallet keys are. Keep in mind every time you run the `get_spend_proof` command it will overwrite your `oxen_spend_proof file`.
+This signature file `lozzax_spend_proof` will be saved in your Lozzax folder, where your daemon and wallet keys are. Keep in mind every time you run the `get_spend_proof` command it will overwrite your `lozzax_spend_proof file`.
 
-You will want to send this file to the person who requires the proof. You can upload the oxen\_spend\_proof file through [https://transfer.sh/](https://transfer.sh/) by running the command within the folder of your signature file:
+You will want to send this file to the person who requires the proof. You can upload the lozzax\_spend\_proof file through [https://transfer.sh/](https://transfer.sh/) by running the command within the folder of your signature file:
 
 ```text
-curl --upload-file ./oxen_spend_proof https://transfer.sh/oxen_spend_proof
+curl --upload-file ./lozzax_spend_proof https://transfer.sh/lozzax_spend_proof
 ```
 
 The terminal will then print out a link to your signature file which you can then provide to the individual performing the check. For example:
 
 ```text
-https://transfer.sh/QhoC7/oxen_spend_proof
+https://transfer.sh/QhoC7/lozzax_spend_proof
 ```
 
 Make sure you provide the following to the individual who will be checking your reserve proof:
 
-* The `oxen_spend_proof` file through the transfer.sh link.
-* The $OXEN transaction txid associated with the transaction you are proving you generated.
+* The `lozzax_spend_proof` file through the transfer.sh link.
+* The $LOZZAX transaction txid associated with the transaction you are proving you generated.
 * The `<message>` if you encrypted the file.
 
 #### 6.2 Checking Spend Proof
 
-To check a spend proof we need to first have the `oxen_spend_proof` file in our Oxen folder and the txid associated with the transaction being proved.
+To check a spend proof we need to first have the `lozzax_spend_proof` file in our Lozzax folder and the txid associated with the transaction being proved.
 
-If you do not have the `oxen_spend_proof` file in your Oxen folder request the individual sending the file to you to use [https://transfer.sh/](https://transfer.sh/), once they send you the link to their `oxen_spend_proof` you can use the following command to download it.
+If you do not have the `lozzax_spend_proof` file in your Lozzax folder request the individual sending the file to you to use [https://transfer.sh/](https://transfer.sh/), once they send you the link to their `lozzax_spend_proof` you can use the following command to download it.
 
 ```text
-curl <link> -o oxen_spend_proof
+curl <link> -o lozzax_spend_proof
 ```
 
-Replacing `<link>` with the link to download the `oxen_spend_proof`.
+Replacing `<link>` with the link to download the `lozzax_spend_proof`.
 
-Now that the `oxen_spend_proof` is in our folder we can run the following command:
+Now that the `lozzax_spend_proof` is in our folder we can run the following command:
 
 ```text
 check_spend_proof <txid> <signature_file> [<message>]
 ```
 
-Where `<txid>` is the txid associated with the transaction that is being proved. `<signature_file>` is the file that was received from the individual sending you the spend proof, normally generated as `oxen_spend_proof` and `<message>` is the key set by the individual who sent you the spend proof.
+Where `<txid>` is the txid associated with the transaction that is being proved. `<signature_file>` is the file that was received from the individual sending you the spend proof, normally generated as `lozzax_spend_proof` and `<message>` is the key set by the individual who sent you the spend proof.
 
 An example would look like the following command
 
 ```text
-check_spend_proof 20eb3b5545d6587e5a379feb2fc69b43d4f8b6b825bb7eff78e263d4e7e8eaa9 oxen_spend_proof car
+check_spend_proof 20eb3b5545d6587e5a379feb2fc69b43d4f8b6b825bb7eff78e263d4e7e8eaa9 lozzax_spend_proof car
 ```
 
 If all goes well, the terminal will output the following:
@@ -442,7 +442,7 @@ If you receive a `Good signature` message that should be a good proof that the t
 
 TX Proofs are used to generate a signature file proving that you generated a TXID, with the option to sign the spend proof with a key. TX proofs work similar to Reserve Proof’s and Spend Proofs however they show more detailed information.
 
-For example let’s imagine you have bought a car from a dealership with $OXEN and have sent 1000 $OXEN to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 $OXEN in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the get\_tx\_proof command.
+For example let’s imagine you have bought a car from a dealership with $LOZZAX and have sent 1000 $LOZZAX to the seller. Unfortunately the dealer does not know which transaction is yours as he has received 5 transactions of 1000 $LOZZAX in the same block for 5 different cars. He knows the txid’s but wants you to prove that you have generate one of the txid’s in his list. Luckily we can prove we generated the txid by using the get\_tx\_proof command.
 
 #### 7.1 Generate Spend Proof
 
@@ -463,54 +463,54 @@ get_tx_proof <txid> <address> [<message>]
 Replacing `<txid>` with the txid of our transfer out, `<address>` with the receiver's address, and replacing `<message>` if we want to add a password to the proof. If all went well the terminal will output the following text:
 
 ```text
-signature file saved to: oxen_tx_proof
+signature file saved to: lozzax_tx_proof
 ```
 
-This signature file `oxen_tx_proof` will be saved in your Oxen folder, where your daemon and wallet keys are. Keep in mind every time you run the `get_tx_proof` command it will overwrite your `oxen_tx_proof` file.
+This signature file `lozzax_tx_proof` will be saved in your Lozzax folder, where your daemon and wallet keys are. Keep in mind every time you run the `get_tx_proof` command it will overwrite your `lozzax_tx_proof` file.
 
-You will want to send this file to the person who requires the proof. You can upload the `oxen_tx_proof` file through [https://transfer.sh/](https://transfer.sh/) by running the command within the folder of your signature file:
+You will want to send this file to the person who requires the proof. You can upload the `lozzax_tx_proof` file through [https://transfer.sh/](https://transfer.sh/) by running the command within the folder of your signature file:
 
 ```text
-curl --upload-file ./oxen_tx_proof https://transfer.sh/oxen_tx_proof
+curl --upload-file ./lozzax_tx_proof https://transfer.sh/lozzax_tx_proof
 ```
 
 The terminal will then print out a link to your signature file which you can then provide to the individual performing the check. For example:
 
 ```text
-https://transfer.sh/QhoC7/oxen_tx_proof
+https://transfer.sh/QhoC7/lozzax_tx_proof
 ```
 
 Make sure you provide the following to the individual who will be checking your reserve proof:
 
-* The `oxen_tx_proof` file through the transfer.sh link.
-* The $OXEN transaction txid associated with the transaction you are proving you generated.
-* The receiver's Oxen address.
+* The `lozzax_tx_proof` file through the transfer.sh link.
+* The $LOZZAX transaction txid associated with the transaction you are proving you generated.
+* The receiver's Lozzax address.
 * The `<message>` if you encrypted the file.
 
 #### 7.2 Checking tx Proof
 
-To check a tx proof we need to first have the `oxen_tx_proof` file in our Oxen folder, the receiver's address and the txid associated with the transaction being proved.
+To check a tx proof we need to first have the `lozzax_tx_proof` file in our Lozzax folder, the receiver's address and the txid associated with the transaction being proved.
 
-If you do not have the `oxen_tx_proof` file in your Oxen folder request the individual sending the file to you to use [https://transfer.sh/](https://transfer.sh/), once they send you the link to their `oxen_tx_proof` you can use the following command to download it.
+If you do not have the `lozzax_tx_proof` file in your Lozzax folder request the individual sending the file to you to use [https://transfer.sh/](https://transfer.sh/), once they send you the link to their `lozzax_tx_proof` you can use the following command to download it.
 
 ```text
-curl <link> -o oxen_tx_proof
+curl <link> -o lozzax_tx_proof
 ```
 
-Replacing `<link>` with the link to download the `oxen_tx_proof`.
+Replacing `<link>` with the link to download the `lozzax_tx_proof`.
 
-Now that the `oxen_tx_proof` is in our folder we can run the following command:
+Now that the `lozzax_tx_proof` is in our folder we can run the following command:
 
 ```text
 check_tx_proof <txid> <address> <signature_file> [<message>]
 ```
 
-Where `<txid>` is the txid associated with the transaction that is being proved, `<address>` is the receiver’s address and `<signature_file>` is the file that was received from the individual sending you the tx proof, normally generated as `oxen_tx_proof` and `<message>` is the key set by the individual who sent you the tx proof.
+Where `<txid>` is the txid associated with the transaction that is being proved, `<address>` is the receiver’s address and `<signature_file>` is the file that was received from the individual sending you the tx proof, normally generated as `lozzax_tx_proof` and `<message>` is the key set by the individual who sent you the tx proof.
 
 An example would look like the following command:
 
 ```text
-check_tx_proof 3f8c62b4d83100ff4f89b44a96350e65aeaa83a9b4273c31f94b9aa12e713044 TRrEpWMLd3rRuirYqsjg1iaNsukAAojWjFDhJ2kK2o4uM6tkcjMerA4SZNat6QHEYe1SoGCFQddVPgRqmkA8kARX1ffU1Wcjc oxen_tx_proof
+check_tx_proof 3f8c62b4d83100ff4f89b44a96350e65aeaa83a9b4273c31f94b9aa12e713044 TRrEpWMLd3rRuirYqsjg1iaNsukAAojWjFDhJ2kK2o4uM6tkcjMerA4SZNat6QHEYe1SoGCFQddVPgRqmkA8kARX1ffU1Wcjc lozzax_tx_proof
 ```
 
 If all goes well, the terminal will output the following:
@@ -555,13 +555,13 @@ Once we have a `<tx key>`, `<txid>` and `<receiving address>` from a specific tr
 check_tx_key <txid> <txkey> <address>
 ```
 
-For the previous example we would run the following command from any Oxen wallet:
+For the previous example we would run the following command from any Lozzax wallet:
 
 ```text
 check_tx_key d5fb415aad43f4e45bc72566d5ad4c8f12629db1f924d953efc2521c137a987f 5dfc4d677e2707317f306219b6aa445feaab4c652927237c012f7e72cb41bf0e T6TZ2VaG1p9PQkDgdVCYwnjoxYSU7ErXX56etGsqHLugAGqynFwBvP4dnN7wvYCcJfMa9LPgtYu8UEUqyc4xsxmx2ZTyMp4U3
 ```
 
-The terminal will show text of how much $OXEN the address received. It will also show how many confirmations the transaction has received from the blockchain. For example:
+The terminal will show text of how much $LOZZAX the address received. It will also show how many confirmations the transaction has received from the blockchain. For example:
 
 ```text
 [wallet T6TZ2V]: check_tx_key d5fb415aad43f4e45bc72566d5ad4c8f12629db1f924d953efc2521c137a987f 5dfc4d677e2707317f306219b6aa445feaab4c652927237c012f7e72cb41bf0e T6TZ2VaG1p9PQkDgdVCYwnjoxYSU7ErXX56etGsqHLugAGqynFwBvP4dnN7wvYCcJfMa9LPgtYu8UEUqyc4xsxmx2ZTyMp4U3  
@@ -571,7 +571,7 @@ This transaction has 10 confirmations
 
 ### 9 Tx Notes
 
-The `oxen-wallet-cli` allows you to add notes to specific txid’s, however this note does not get stored on the blockchain, rather it is stored on client side, on the device that generates the `tx_note`.
+The `lozzax-wallet-cli` allows you to add notes to specific txid’s, however this note does not get stored on the blockchain, rather it is stored on client side, on the device that generates the `tx_note`.
 
 #### 9.1 Set tx note
 

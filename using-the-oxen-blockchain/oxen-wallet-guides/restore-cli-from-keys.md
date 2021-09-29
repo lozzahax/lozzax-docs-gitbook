@@ -1,4 +1,4 @@
-# Restoring an Oxen CLI Wallet from keys
+# Restoring an Lozzax CLI Wallet from keys
 
 If you have a Mnemonic Seed Phrase, restoring your wallet from it would probably be a good option. Otherwise, you can restore your wallet from private keys. You will need to have the following keys to proceed:
 
@@ -9,14 +9,14 @@ If you have a Mnemonic Seed Phrase, restoring your wallet from it would probably
 ## Step 1: Download and unzip CLI wallet
 
 * [Download](../../downloads.md) the latest release of wallet CLI software for your desired operating system
-* Unzip  `oxen-[operating-system]-[platform]-[version].zip` file
+* Unzip  `lozzax-[operating-system]-[platform]-[version].zip` file
 
 ## Step 2: Run wallet in restore mode
 
 * Open a [Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe) \(Windows\) or [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator) \(Linux / OSX\) and navigate to the wallet folder
 * Run wallet with `--generate-from-keys` argument:
 
-`./oxen-wallet-cli --generate-from-keys [New Wallet Name]`
+`./lozzax-wallet-cli --generate-from-keys [New Wallet Name]`
 
 Where `[New Wallet Name]` is a new wallet name. You can enter any name here, use something memorable and meaningful.
 
@@ -44,7 +44,7 @@ If you don't know a specific blockchain height, press \[Enter\] for scanning fro
 For refresh process to start, you need to have your daemon running. Another option would be to use a remote node. For that, use the following command, replacing and with the host and port number of the remote node you are connecting to:
 
 ```text
-./oxen-wallet-cli --daemon-address <host>:<port>
+./lozzax-wallet-cli --daemon-address <host>:<port>
 ```
 
 Once refresh is done, you can use your full functioning restored wallet. Your public wallet address will remain the same.
