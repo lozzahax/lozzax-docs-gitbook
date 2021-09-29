@@ -30,7 +30,6 @@ Once active on the network, Oxen Service Nodes are required to:
 | :--- | :--- |
 | [**Service Node setup**](../using-the-oxen-blockchain/oxen-service-node-guides/setting-up-an-oxen-service-node.md) | How to host and maintain an Oxen Service Node using a Debian package and CLI wallet. |
 | \*\*\*\*[**Staking to a shared service node as a contributor**](../using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md)\*\*\*\* | How to stake to a shared Oxen Service Node as a contributor. |
-| \*\*\*\*[**Oxen Dashboard**](https://lokidashboard.com)\*\*\*\* | Statistics, data, maps, and other information on Oxen Service Nodes. |
 | \*\*\*\*[**Service node RPC Calls**](../using-the-oxen-blockchain/advanced/service-node-rpc-calls.md)\*\*\*\* | List of Oxen Service Node JSON 2.0 RPC calls \(advanced users only\). |
-| \*\*\*\*[**Active service node list**](https://lokiblocks.com/)\*\*\*\* | The Oxen Blockchain Explorer, with a list of current Service Node public keys. |
+| \*\*\*\*[**Active service node list**](https://explorer.lozzax.xyz/)\*\*\*\* | The Oxen Blockchain Explorer, with a list of current Service Node public keys. |
 

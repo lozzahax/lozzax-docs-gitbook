@@ -17,7 +17,7 @@ $OXEN solves the inflation problem through a robust **token burning scheme**. Th
 
 We periodically reevaluate and adjust fees and burn amounts to maintain reasonable levels relative to the price of $OXEN. For example, in the Valiant Vidar hardfork, the Blink fees and burn ratios were adjusted from approx. 0.2 $OXEN fee with 80% burned in a typical transaction to approx. 0.1 $OXEN fee with 60% burned.
 
-You can view the total burned $OXEN in the [block explorer](http://oxen.observer/).  
+You can view the total burned $OXEN in the [block explorer](http://explorer.lozzax.xyz/).  
   
   
 

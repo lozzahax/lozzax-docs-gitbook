@@ -31,38 +31,3 @@ sudo apt install curl
 You only need to do this step the first time you want to set up the Lokinet repository. After you've done it once, the repository will automatically update whenever you fetch new system updates.
 
 This first command installs the public key used to sign official Lokinet binaries.
-
-```text
-curl -s https://deb.imaginary.stream/public.gpg | sudo apt-key add -
-```
-
-The next command tells `apt` where to find the packages:
-
-```text
-echo "deb https://deb.imaginary.stream $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/imaginary.stream.list
-```
-
-Then resync your package repositories with:
-
-```text
-sudo apt update
-```
-
-Now install Lokinet:
-
-```text
-sudo apt install lokinet-gui
-```
-
-Congratulations, Lokinet is now installed and running in the background.
-
-To access the GUI client all you need to do is open the `lokinet-gui` application from your preferred application launcher.
-
-### Toggling Lokinet off and on
-
-Simply jump into the lokinet-gui client and click the large green power button.
-
-### Using Lokinet
-
-Head over to [Exit nodes](../exit-nodes.md) or [Accessing SNApps](../snapps/accessing-snapps.md) for an overview of the exciting things you can do with Lokinet up and running!
-

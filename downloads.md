@@ -1,12 +1,12 @@
 ---
-description: You can find all of our Oxen wallet releases here
+description: You can find all of our Lozzax wallet releases here
 ---
 
 # 📁 Downloads
 
-Need some help using our wallets? Check out the [Oxen wallet guides](using-the-oxen-blockchain/oxen-wallet-guides/). You can also find out more about [setting up service nodes](https://docs.oxen.io/using-the-oxen-blockchain/oxen-service-node-guides/full-service-node-setup-guide) and [staking](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md) from our wallets.
+Need some help using our wallets? Check out the [Lozzax wallet guides](using-the-lozzax-blockchain/lozzax-wallet-guides/). You can also find out more about [setting up service nodes](https://docs.Lozzax.xyz/using-the-lozzax-blockchain/oxen-service-node-guides/full-service-node-setup-guide) and [staking](using-the-oxen-blockchain/oxen-service-node-guides/staking-to-shared-service-node.md) from our wallets.
 
-## Oxen Wallet downloads
+## Lozzax Wallet downloads
 
 The Oxen GUI Wallet is the most user friendly Oxen Wallet, and is perfect for beginners or those simply looking to send or store their OXEN.
 

@@ -12,5 +12,5 @@ Lokinet also provides the benefit of being protocol-agnostic — while competing
 
 ### Get Lokinet
 
-To download Lokinet, head over to [the Lokinet website](https://lokinet.org/). 
+To download Lokinet, download our build. 
 

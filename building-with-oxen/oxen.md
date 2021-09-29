@@ -1,8 +1,7 @@
 ---
 description: >-
-  Oxen is many things. A private cryptocurrency. A secure messaging platform. A
-  network anonymity layer. Tools to build a more private future for the
-  Internet.
+  Lozzax is a complete fork of Oxen platform which focuses on building tools for a more private
+  digital future.
 ---
 
 # 🐂 Oxen
