@@ -17,3 +17,6 @@ This blockchain, network, and technology stack that Lozzax offered made our work
 
 For more in-depth information on the components of the Lozzax stack, head over to [Building on Lozzax](building-with-lozzax/).
 
+## NOTE:
+
+* Majority of the writeups are gotten from the Oxen documentary
