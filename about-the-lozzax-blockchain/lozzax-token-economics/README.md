@@ -1,8 +1,8 @@
 ---
-description: Learn about the economics of the Lozzax token
+description: Learn about the economics of Lozzax 
 ---
 
-# 📊 Lozzax economics
+# 💰 Lozzax economics
 
 The Lozzax network is run by a decentralised network of incentivised nodes called [service nodes](../lozzax-service-nodes.md).
 
