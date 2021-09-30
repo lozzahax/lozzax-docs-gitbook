@@ -31,7 +31,5 @@ To download the latest release of the Lozzax CLI Wallet, head to [our downloads 
 | [Restore CLI Wallet from keys](restore-cli-from-keys.md) | How to restore your wallet from spend and view keys. |
 | [Restore CLI Wallet from seed](restore-cli-from-seed.md) | How to restore your wallet using its 25-word mnemonic seed phrase. |
 | [CLI Wallet commands](../Wallets/CliWallet/WalletCommands.md) | A list and explanation of the different commands available within `lozzax-wallet-cli`. |
-| [CLI Setup for macOS](cli-wallet-setup-macos.md) | How to configure `lozzax-wallet-cli` for the first time on macOS. |
-| [Lozzax Ledger Wallet setup: CLI Wallet](lozzax-ledger-wallet-usage-cli-wallet.md) | How to setup the Lozzax CLI Wallet on the Ledger Hardware Wallet. |
 | [Exporting a CSV of your wallet transaction history](exporting-a-csv-of-your-wallet-transaction-history.md) | How to export your Lozzax wallet's transaction history as a CSV file.                                                   |
 

@@ -8,7 +8,7 @@ The Lozzax blockchain can be used by end users, developers, and service provider
 
 ### 💸 $LOZZAX and the 💰Lozzax Wallet: Private instant transactions
 
-The Lozzax Wallet, available in user-friendly GUI or powerful CLI versions, enables you to send and receive private anonymous transactions in the blink of an eye. You can learn more about the Lozzax Wallet [here](), or download your preferred Wallet version [here](https://github.com/loki-project/loki-electron-gui-wallet/releases). 
+The Lozzax Wallet, available in user-friendly GUI or powerful CLI versions, enables you to send and receive private anonymous transactions in the blink of an eye. You can learn more about the Lozzax Wallet [here](), or download your preferred Wallet version [here](https://github.com/lozzax/lozzax-electron-gui-wallet/releases). 
 
 ### 🖥 Lozzax Service Nodes: Earn $LOZZAX rewards for powering up the Lozzax network
 
