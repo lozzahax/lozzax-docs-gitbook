@@ -12,9 +12,6 @@ The Lozzax GUI wallet as of v1.6.0 supports the exporting of your transactions. 
 ![](https://github.com/lozzahax/lozzax-docs-gitbook/raw/master/.gitbook/assets/export.jpg)
 
 * The wallet will then prompt you for a folder to save the CSV to. This defaults to a CSV directory within the Lozzax folder \(Same directory your wallet keys are stored\) but you can edit this to any location.
-
-![](https://github.com/lozzahax/lozzax-docs-gitbook/raw/master/.gitbook/assets/export.jpg)
-
 * Click Export and you will be prompted for your wallet password
 * You will then see a green notification at the bottom of the window if the export is successful. For example: “Transfers exported to /home/sean/Desktop/transfers.csv”
 
