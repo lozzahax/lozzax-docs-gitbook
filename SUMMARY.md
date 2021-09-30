@@ -5,7 +5,7 @@
   * [🌐 Lokinet](building-with-lozzax/lokinet.md)
   * [🔒 Session](building-with-lozzax/session.md)
   * [🥰 Lozzax](building-with-lozzax/lozzax.md)
-* [📁 Downloads](downloads.md)
+* [📥 Downloads](downloads.md)
 * [🆘 Support](support.md)
 
 ## About the Lozzax blockchain
