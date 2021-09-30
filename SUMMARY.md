@@ -1,17 +1,17 @@
 # Table of contents
 
-* [💡 Introduction to Lozzax](README.md)
-* [⚒️ Building with Lozzax](building-with-lozzax/README.md)
+* [🍷 Introduction to Lozzax](README.md)
+* [⛏️ Building with Lozzax](building-with-lozzax/README.md)
   * [🌐 Lokinet](building-with-lozzax/lokinet.md)
   * [🔒 Session](building-with-lozzax/session.md)
-  * [🐂 Lozzax](building-with-lozzax/lozzax.md)
+  * [🥰 Lozzax](building-with-lozzax/lozzax.md)
 * [📁 Downloads](downloads.md)
 * [🆘 Support](support.md)
 
 ## About the Lozzax blockchain
 
 * [🗺 Overview](about-the-lozzax-blockchain/overview.md)
-* [📊 Token economics](about-the-lozzax-blockchain/lozzax-token-economics/README.md)
+* [🏦 Token economics](about-the-lozzax-blockchain/lozzax-token-economics/README.md)
   * [🔥 Token burning](about-the-lozzax-blockchain/lozzax-token-economics/token-burning.md)
 * [🖥 Lozzax Service Nodes](about-the-lozzax-blockchain/lozzax-service-nodes.md)
 * [💓 Pulse: PoS on Lozzax](about-the-lozzax-blockchain/pulse-pos-on-lozzax/README.md)
