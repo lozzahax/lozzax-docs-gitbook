@@ -1,6 +1,6 @@
 # 🏎 Express service node setup guide
 
-Thinking of running an Lozzax Service Node? Great! The guide below will help you configure a device with the necessary service node software packages, and stake $LOZZAX to register the node on the Lozzax network.
+The guide below will help you configure a device with the Lozzax service_node, and stake $LOZZAX to register the node on the Lozzax network.
 
 > Note: This guide assumes some familiarity with the  command line and running a server. For a more detailed walkthrough, check out our [full service node setup guide](full-service-node-setup-guide.md).
 
@@ -8,8 +8,6 @@ Thinking of running an Lozzax Service Node? Great! The guide below will help you
 
 One of:
 
-* Debian 10 \("buster"\)
-* Debian unstable \("sid"\)
 * Ubuntu 18.04 \("bionic"\)
 * Ubuntu 20.04 \("focal"\)
 * Ubuntu 20.10 \("groovy"\)
@@ -31,64 +29,23 @@ If you are using a firewall then ensure that the following ports are open/reacha
 You can configure a new Lozzax Service Node by running the following 4 commands on the Linux server you want to become a service node \(these commands will work on Ubuntu; modifications may be necessary on other Linux distributions\):
 
 ```text
-sudo curl -so /etc/apt/trusted.gpg.d/lozzax.gpg https://deb.lozzax.xyz/pub.gpg
+wget https://github.com/lozzax/lozzax/releases/download/v9.2.0/storage.tar.gz
 
-echo "deb https://deb.lozzax.xyz $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/lozzax.list
+tar -xvf storage.tar.gz
 
-sudo apt update
+cd storage/
 
-sudo apt install lozzax-service-node
+
 ```
 
-The services will run via systemd as `lozzax-node.service`, `lozzax-storage-server.service`, and `lokinet-router.service`.
-
-Once the blockchain has synced to the server \(which usually takes a few hours\), your service node will be [ready to be staked](setting-up-an-lozzax-service-node.md#staking-your-service-node). You can use the `lozzaxd status` command to check blockchain sync progress.
-
-### Express guide
-
-#### Step 1: Initial repository setup
-
-To add the Lozzax repository, run the following commands.
-
-> Note: You only need to follow this step the first time you want to set up the repository; after you've done it once, the repository will automatically update whenever you fetch new system updates.
-
-This first command installs the public key used to sign the Lozzax Service Node packages:
+The best way to run the lozzax servie_node is to use this method below for now
 
 ```text
-sudo curl -so /etc/apt/trusted.gpg.d/lozzax.gpg https://deb.lozzax.xyz/pub.gpg
+./lozzax-storage 0.0.0.0 8080 --omq-port 21020 --lozzaxd-rpc=tcp://127.0.0.1:33129
 ```
 
-The second command tells `apt` where to find the packages. **Note:** Replace `<DISTRO>`with the appropriate value to match your operating system.
+Remember to use this `tcp://127.0.0.1:33129` when running the `lozzaxd` daemon
 
-To find your `<DISTRO>` run the following command: `lsb_release -sc`
-
-Alternatively, your `<DISTRO>` can be found by using the following list:
-
-* sid      \(Debian testing/unstable\)
-* buster   \(Debian 10\)
-* bionic   \(Ubuntu 18.04\)
-* focal     \(Ubuntu 20.04\)
-* groovy    \(Ubuntu 20.10\)
-
-```text
-echo "deb https://deb.lozzax.xyz <DISTRO> main" | sudo tee /etc/apt/sources.list.d/lozzax.list
-```
-
-Then resync your package repositories with:
-
-```text
-sudo apt update
-```
-
-#### Step 2: Lozzax Service Node configuration
-
-To configure your service node, simply install the `lozzax-service-node` package:
-
-```text
-sudo apt install lozzax-service-node
-```
-
-This will detect your public IP \(or allow you to enter it yourself\) and automatically update the /etc/lozzax/lozzax.conf configuration file with the necessary additional settings to run a service node.
 
 Congratulations! Your service node is now ready to be registered and staked.
 
@@ -96,10 +53,16 @@ Congratulations! Your service node is now ready to be registered and staked.
 
 #### Preparing your service node for registration
 
-To prepare your service node for registration, run the following command:
+Run he load daemon like his 
 
 ```text
-lozzaxd prepare_registration
+./lozzaxd --service-node  --service-node-public-ip YOUR-IP-ADDRESS --lmq-local-control=tcp://127.0.0.1:33129
+```
+
+To prepare your service node for registration, run the following command were you have `lozzaxd` running:
+
+```text
+prepare_registration
 ```
 
 This will prompt you for some registration details, then output a registration command. Copy the output from this command in preparation for the next step.
@@ -108,7 +71,7 @@ This will prompt you for some registration details, then output a registration c
 
 #### Staking and registering your service node
 
-To stake and register your service node, open the Lozzax GUI wallet. Make sure your wallet has a balance of at least 15,000 $LOZZAX to meet the service node staking requirement \(less if you're configuring a [shared service node](full-service-node-setup-guide.md#5-2-setting-up-a-pooled-service-node)\). Navigate to the `Service Nodes`tab &gt; `Registration` section, and paste the output from the above command, then click **Register Service Node**. 
+To stake and register your service node, open the Lozzax GUI wallet. Make sure your wallet has a balance of at least 25,000 $LOZZAX to meet the service node staking requirement \(less if you're configuring a [shared service node](full-service-node-setup-guide.md#5-2-setting-up-a-pooled-service-node)\). Navigate to the `Service Nodes`tab &gt; `Registration` section, and paste the output from the above command, then click **Register Service Node**. 
 
 Done! Your staking transaction will now be submitted to the network, and after a short delay, your service node will be registered and begin contributing to the network \(and receiving rewards!\).
 
@@ -117,36 +80,12 @@ Done! Your staking transaction will now be submitted to the network, and after a
 You can easily check if your service node is registered on the network. First, connect to the VPS where the service node is running and run the following command to retrieve your service node's public key:
 
 ```text
-lozzaxd status
+ status
 ```
 
 This will output a bunch of information about your service node, but there's one part we're interested in at this stage: The long string of random letters and numbers after the characters `SN:` . This string is your service node's public key, used to identify your service node on the list of registered and operational service nodes. Select and copy the public key \(do not copy any of the surrounding information\).
 
-You can now jump onto [lozzax.observer](https://lozzax.observer/), open the full list of active service nodes, and use Cmd+F/Ctrl+F to check if your service node's public key appears in the list.
-
-#### Upgrading
-
-When a new release is available, upgrading is as simple as syncing your repositories:
-
-```text
-sudo apt update
-```
-
-Then installing any updates using:
-
-```text
-sudo apt upgrade
-```
-
-> Note that this will install both updated Lozzax packages _and_ any available system updates \(this is generally a good thing!\)
-
-During the upgrade, all running instances of `lozzaxd` will be restarted to switch them over to the updated `lozzaxd`.
-
-If for some reason you want to install _only_ updated Lozzax package upgrades but not other system packages, then instead of `sudo apt upgrade` you can use:
-
-```text
-sudo apt install lozzax-storage-server lozzaxd lokinet-router
-```
+You can now jump onto [explorer.lozzax.xyz](https://explorer.lozzax.xyz/), open the full list of active service nodes, and use Cmd+F/Ctrl+F to check if your service node's public key appears in the list.
 
 Having trouble? Just [head to our Support section](../../support.md).
 

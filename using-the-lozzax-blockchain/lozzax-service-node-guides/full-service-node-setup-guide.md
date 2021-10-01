@@ -1,21 +1,18 @@
 # 🍺 Full service node setup guide
 
-This guide will walk you through the complete process of setting up, staking, and running an Lozzax Service Node. This guide is targeted at non-developers, so even if you're new to Linux or the command line, you should be able to follow along without any trouble.
+This guide will walk you through the complete process of setting up, staking, and running Lozzax Service Node. This guide is targeted at non-developers, so even if you're new to Linux or the command line, you should be able to follow along without any trouble.
 
-You can run the Lozzax Service Node software on any device running a supported operating system, but for the purposes of this guide, we're assuming you're setting up a service node on a remote Ubuntu or Debian server. If you're new to Linux and running servers in general, this is the best way to go. If you're more experienced and would prefer to run your service node on a different operating system, you'll need to modify the syntax of some commands to suit your selected OS.
 
 #### Running an Lozzax Service Node: Requirements
 
-These are the basic requirements for running a service node. These requirements may change in future, so keep an eye on [the Lozzax blog](https://lozzax.xyz/blog) or join our [Telegram community](https://t.me/Lozzax_Community) and [Discord server](https://discord.com/invite/67GXfD6) for all the latest updates.
+These are the basic requirements for running a service node. These requirements may change in future, so keep an eye on [the Lozzax blog](https://lozzax.xyz/blog) or join our [Telegram community](https://t.me/Lozzax_Community) and [Discord server](https://discord.gg/BssSsnEnvs) for all the latest updates.
 
 | Spec | Requirement |
 | :--- | :--- |
-| Latest Lozzax Service Node software | Latest service node debs \(installed through the steps below\) or latest [binaries](https://github.com/lozzax/loki-core/releases) |
-| Server operating system | Ubuntu 18.04+ or Debian 10+ |
-| Storage | 30GB |
-| RAM | 2-4GB \(2GB at absolute minimum\) |
+| Server operating system | Ubuntu 18.04+ and above |
+| Storage | 20GB |
+| RAM | 2-4GB |
 
-> Note: It is possible for an experienced system administrator to run a service node on a server running an operating system other than Ubuntu or Debian. However, this requires additional work to start up and manage the required service node services, and is beyond the scope of this guide.
 
 ### Table of Contents
 
@@ -56,10 +53,8 @@ Choosing where to set up your service node is the biggest choice you will make w
 
 * A stable, relatively fast connection \(100Mbps or better\) to route messages and data quickly
 * A minimum of 2GB of RAM, to run the service node software reliably
-* At least 30GB of storage space, used to store a local copy of the blockchain
+* At least 20GB of storage space, used to store a local copy of the blockchain
 * Redundant power, as found in most data centres. If your server goes down while staked, your service node could be [kicked off the network](service-node-deregistration.md) and you could have your funds locked for 30 days \(without receiving rewards\)
-
-We strongly recommend against running a service node from home. Most home internet connections are relatively slow \(especially for uploads — service nodes need high speeds for both uploading and downloading data\) and typically don't offer static IP addresses, which are required by service nodes. Connection speed and support aside, issues like power outages can easily disrupt home servers, which could result in your service node being kicked from the network.
 
 Typically, the easiest and cheapest way to host a server such as an Lozzax Service Node is to rent a Virtual Private Server \(VPS\). There are thousands of options when it comes to VPS providers, but any of the providers and configurations listed below will do.
 
@@ -149,43 +144,20 @@ Then resync your package repositories with:
 sudo apt update
 ```
 
-#### Step 4: Lozzax Service Node installation and operation
+#### Step 4:  Service Node installation and operation
 
-To install the software needed to run a service node, simply install the `lozzax-service-node` package:
-
-
-
-#### 4.1: Interacting with the running lozzaxd
-
-If you run the `lozzaxd` command with an appended lozzaxd command \(note that `sudo` is not required!\), the `lozzaxd` command forwards this instruction to the running `lozzaxd`. So, for example, to get the current `lozzaxd` status you can run you would run:
+To install the software needed to run a service node, simply download the storage server with the following:
 
 ```text
-lozzaxd status
-
-lozzaxd print_sn_status
+wget https://github.com/lozzax/lozzax/releases/download/v9.2.0/storage.tar.gz
 ```
-
-To see the output log of your node you can run the following command:
+You have to extract the `storage.tar.gz` file with:
 
 ```text
-journalctl -u lozzax-node -af
+tar -xvf storage.tar.gz
 ```
+Check inside the folder to see the content `lozzax-storage`
 
-This is useful to see if your node is syncing with the blockchain and to see other diagnostic messages that may come up from time to time. \(Press Ctrl-C to stop watching the log\).
-
-For a full list of supported commands run:
-
-```text
-lozzaxd help
-```
-
-You can also get basic statistics \(such as uptime proof and ping times\) on the running daemons from the `systemctl status` commands:
-
-```text
-systemctl status lozzax-node
-systemctl status lozzax-storage-server
-systemctl status lokinet-router
-```
 
 #### Step 5: Service node registration
 
@@ -205,17 +177,17 @@ You'll need your wallet address to register your service node. Copy your primary
 To run a service node as the sole contributor, you'll need:
 
 * A fully synchronized, up-to-date Lozzax daemon running on your service node
-* An Lozzax wallet with at least 15,000 $LOZZAX in it \(to meet the 15,000 $LOZZAX staking requirement to register your service node\)
+* An Lozzax wallet with at least 25,000 $LOZZAX in it \(to meet the 25,000 $LOZZAX staking requirement to register your service node\)
 
 #### 5.1.1: Preparing your node for registration
 
-Log in \(if not already logged in\) to the VPS running the service node, then run the following command:
+Log in \(if not already logged in\) to the VPS running the service node, then run the following command were your lozzaxd is running and put the below word:
 
 ```text
-lozzaxd prepare_registration
+ prepare_registration
 ```
 
-The daemon will output the current staking requirement \(15,000 $LOZZAX\) and prompt you with an input to clarify whether you are an individual staker or you will be running a pool. Type `y` and click enter, as you will be the sole staker.
+The daemon will output the current staking requirement \(25,000 $LOZZAX\) and prompt you with an input to clarify whether you are an individual staker or you will be running a pool. Type `y` and click enter, as you will be the sole staker.
 
 The daemon will now prompt you for the operator's \(your\) Lozzax address — this is the address saved in Step 5. Retrieve this address, copy it, then paste it into the terminal and press Enter.
 
@@ -231,7 +203,7 @@ register_service_node 4294967292 T6TCCyDgjjbddtzwNGryRJ5HntgGYvqZTagBb2mtHhn7WWz
 
 #### 5.1.2: Registering your service node
 
-To stake and register your service node, open your Lozzax GUI wallet \(with a balance of at least 15,000 $LOZZAX\). Navigate to the Service Nodes tab, then the Registration subsection. Paste the `register_service_node` command from Step 5.1.1 above, and click **Register Service Node**.
+To stake and register your service node, open your Lozzax GUI wallet \(with a balance of at least 25,000 $LOZZAX\). Navigate to the Service Nodes tab, then the Registration subsection. Paste the `register_service_node` command from Step 5.1.1 above, and click **Register Service Node**.
 
 If you're using the Lozzax CLI wallet, simply paste the registration command directly into the CLI wallet prompt and hit Enter.
 
@@ -241,7 +213,7 @@ Well done! Continue to [Step 6: Service node check](full-service-node-setup-guid
 
 #### _**Minimum contribution rules**_
 
-The service node staking requirement is fixed at a flat 15,000 $LOZZAX total. Service nodes accept at most 4 contributions, meaning the minimum contribution to a service node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
+The service node staking requirement is fixed at a flat 25,000 $LOZZAX total. Service nodes accept at most 4 contributions, meaning the minimum contribution to a service node is `<Remaining Staking Requirement> ➗ <Number of Remaining Contributors>`.
 
 When setting up reserved spots in a pooled service node, the node administrator \(you\) must ensure the reserved stake amounts each meet the minimum staking requirement; contributors then simply stake their reserved amounts.
 
@@ -308,23 +280,23 @@ Copy the whole line of text in your daemon and paste it into your notepad, as yo
 
 You have 2 weeks from the moment of registering the Service Node to run the `register_service_node` command, however it is advised to do it as soon as possible.
 
-Before you disconnect from your VPS, run the following command:
+Before you disconnect from your VPS, put the following command were you are running `lozzaxd`:
 
 ```text
-lozzaxd print_sn_key
+print_sn_key
 ```
 
 This will output a bunch of information about your service node, but there's one part we're interested in at this stage: the long string of random letters and numbers after the characters `SN:` . This string is your service node's public key, used to identify your service node on the list of registered and operational service nodes. Select and copy the public key \(do not copy any of the surrounding information\).
 
-On your local machine, open your Lozzax GUI or CLI wallet and make sure your wallet contains at least 15,000 $LOZZAX to meet the service node staking requirement. Once you're in your wallet and have checked the balance, run the command which was provided above when you ran the `prepare_registration` command. The wallet will prompt you to confirm your password, then the amount of $LOZZAX to stake. Confirm this by typing `y` and clicking enter.
+On your local machine, open your Lozzax GUI or CLI wallet and make sure your wallet contains at least 25,000 $LOZZAX to meet the service node staking requirement. Once you're in your wallet and have checked the balance, run the command which was provided above when you ran the `prepare_registration` command. The wallet will prompt you to confirm your password, then the amount of $LOZZAX to stake. Confirm this by typing `y` and clicking enter.
 
-Once this command completes, your staking transaction will be sent to be included on the blockchain. It may take a few minutes for the transaction to be mined into a block; you can check the status using the following command:
+Once this command completes, your staking transaction will be sent to be included on the blockchain. It may take a few minutes for the transaction to be mined into a block; you can check the status using the following command were `lozzaxd` is running:
 
 ```text
-lozzaxd print_sn_status
+print_sn_status
 ```
 
-You can also check your node's status by looking for your `<Service Node Public Key>` in the "Service Nodes Awaiting Contributions" section on [the Lozzax block explorer](https://lozzax.observer/).
+You can also check your node's status by looking for your `<Service Node Public Key>` in the "Service Nodes Awaiting Contributions" section on [the Lozzax block explorer](https://explorer.lozzax.xyz/).
 
 Once the service node registration is received, you can send the `<Service Node Public Key>` to your contributors, along with the amount of $LOZZAX they are required to stake.
 
@@ -341,12 +313,12 @@ After you've staked to your service node \(or after all contributors have staked
 Connect to the VPS where the service node is running and run the following command to retrieve your service node's public key:
 
 ```text
-lozzaxd print_sn_key
+print_sn_key
 ```
 
 This will output a long string of letters and numbers: your service node's public key. This public key is used to identify your service node on the list of registered and operational service nodes. Select and copy the public key.
 
-You can now jump onto [lozzax.observer](https://lozzax.observer/), open the full list of active service nodes, and use Cmd+F/Ctrl+F to check if your service node's public key appears in the list.
+You can now jump onto [explorer.lozzax.xyz](explorer.lozzax.xyz), open the full list of active service nodes, and use Cmd+F/Ctrl+F to check if your service node's public key appears in the list.
 
 #### Step 7: Unlocking your stake
 
@@ -370,30 +342,6 @@ Receiving a deregistration **after** participant\(s\) have already requested an 
 
 ```text
 print_locked_stakes
-```
-
-### **Updating your binaries**
-
-When a new release is available, upgrading is as simple as syncing with the repository:
-
-```text
-sudo apt update
-```
-
-Then installing updates using:
-
-```text
-sudo apt upgrade
-```
-
-> Note that this will install both updated lozzaxd packages _and_ any available system updates \(this is generally a good thing!\).
-
-During the upgrade, all instances of `lozzaxd` will be restarted if they are currently running in order to switch to the updated `lozzaxd`.
-
-If for some reason you want to install _only_ Lozzax package upgrades but not other system package updates, then instead of the `sudo apt upgrade` you can use:
-
-```text
-sudo apt install lozzax-storage-server lozzaxd lokinet-router
 ```
 
 ### Conclusion
