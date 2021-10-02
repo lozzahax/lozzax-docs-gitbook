@@ -14,24 +14,18 @@ The CLI wallet is for more advanced users, and offers more tools to interact wit
 
 ### Windows
 
-* [Lozzax GUI Wallet](https://github.com/lozzax-io/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-win.exe) v1.6.0
-* [Lozzax CLI Wallet](https://github.com/lozzax-io/lozzax-core/releases) \(packaged with Lozzax Core\)
+* [Lozzax GUI Wallet](https://github.com/lozzax/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-win.exe) v1.6.0
+* [Lozzax CLI Wallet](https://github.com/lozzax/lozzax/releases) \(packaged with Lozzax Core\)
 
 ### Linux
 
-* [Lozzax GUI Wallet](https://github.com/lozzax-io/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-linux.AppImage) v1.6.0
-* [Lozzax CLI Wallet](https://github.com/lozzax-io/lozzax-core/releases) \(packaged with Lozzax Core\)
+* [Lozzax GUI Wallet](https://github.com/lozzax/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-linux.AppImage) v1.6.0
+* [Lozzax CLI Wallet](https://github.com/lozzax/lozzax/releases) \(packaged with Lozzax Core\)
 
-### macOS
 
-* [Lozzax GUI Wallet](https://github.com/lozzax-io/lozzax-electron-gui-wallet/releases/download/v1.6.0/lozzax-electron-wallet-1.6.0-mac.dmg) v1.6.0
-* [Lozzax CLI Wallet](https://github.com/lozzax-io/lozzax-core/releases) \(packaged with Lozzax Core\)
 
 ### Android
 
-* [Lozzax Mobile Wallet](https://play.google.com/store/apps/details?id=io.lozzax.wallet)
+* [Lozzax Mobile Wallet](https://github.com/lozzax/lozzax/releases/download/v9.2.0/lozzax.apk)
 
-### iOS
-
-* [Lozzax Mobile Wallet](https://apps.apple.com/app/lozzax-wallet-rangeproof/id1547745078)
 
