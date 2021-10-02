@@ -6,7 +6,7 @@ description: Learn about the economics of Lozzax
 
 The Lozzax network is run by a decentralised network of incentivised nodes called [service nodes](../lozzax-service-nodes.md).
 
-As the workhorses of the network, service nodes get the lion's share of the reward: **1,880 $LOZZAX per block**.
+As the workhorses of the network, service nodes get the lion's share of the reward: **1,188 $LOZZAX per block**.
 
 This results in the creation of **855,360 $LOZZAX per day**.
 
