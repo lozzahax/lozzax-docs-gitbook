@@ -8,7 +8,7 @@ description: >-
 
 ### Introduction
 
-Pulse is [Lozzax](../../)'s Proof of Stake \(PoS\) scheme developed by the Lozzax team. There are various reasons this scheme was implemented in favour of the more popular blockchain consensus mechanism, Proof of Work \(Pow\).
+Pulse is [Lozzax](../../)'s Proof of Stake \(PoS\) scheme developed by the Oxen team. There are various reasons this scheme was implemented in favour of the more popular blockchain consensus mechanism, Proof of Work \(Pow\).
 
 Pulse makes Lozzax more secure, more sustainable, and more powerful.
 

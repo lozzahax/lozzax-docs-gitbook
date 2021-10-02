@@ -4,11 +4,11 @@ description: Pulse is Lozzax's Proof of Stake consensus mechanism
 
 # 💓 Pulse: PoS on Lozzax
 
-Pulse was invented by the Lozzax team. Fundamentally, every blockchain — including Lozzax — is exactly what it says in the name: a chain of blocks. One 'block' in the Lozzax blockchain is made up of a set of $LOZZAX transactions which have been deemed valid by the network. But when the network consists of thousands of computers all over the world, how does it come to consensus about the state of the blockchain?
+Pulse was invented by the Oxen team. One 'block' in the Lozzax blockchain is made up of a set of $LOZZAX transactions which have been deemed valid by the network. But when the network consists of thousands of computers all over the world, how does it come to consensus about the state of the blockchain?
 
 That's where Pulse comes in. 
 
-Lozzax uses Lozzax implementation of the 'Proof of Stake' consensus mechanism called pulse, and it forms the foundation of the Lozzax Service Node network. Let's dive into how it works and why we use it.
+Lozzax uses Oxen implementation of the 'Proof of Stake' consensus mechanism called pulse, and it forms the foundation of the Lozzax Service Node network. Let's dive into how it works and why we use it.
 
 ### Proof of Stake: How does it work?
 

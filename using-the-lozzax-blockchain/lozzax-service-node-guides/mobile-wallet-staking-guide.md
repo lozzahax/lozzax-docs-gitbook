@@ -18,7 +18,7 @@ Press "Start Staking" in the menu.
 
 ### Step 4. 
 
-Search for nodes that are awaiting contribution on [https://lozzaxsn.com](https://lozzaxsn.com/status/awaiting_contribution).
+Search for nodes that are awaiting contribution on [Service Node](https://explorer.lozzax.xyz/service_nodes).
 
 ### Step 5. 
 
@@ -26,9 +26,8 @@ Copy the service node public key into the box at the top of the screen labelled 
 
 ### Step 6. 
 
-Enter the amount of Lozzax you wish to stake in the other box. The minimum stake amount will be listed on [https://lozzaxsn.com](https://lozzaxsn.com/status/awaiting_contribution), but to work it out yourself you can simply divide the amount of Lozzax available to stake by the number of slots left for that Service Node.
+Enter the amount of Lozzax you wish to stake in the other box. The minimum stake amount will be listed on [Service Node](https://explorer.lozzax.xyz/service_nodes), but to work it out yourself you can simply divide the amount of Lozzax available to stake by the number of slots left for that Service Node.
 
-For example, if a node had 2 slots remaining and 7500 Lozzax available for stake, the minimum contribution would be 7500/2 = 3750 Lozzax.
 
 ### Step 7. 
 
