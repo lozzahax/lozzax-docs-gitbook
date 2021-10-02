@@ -4,7 +4,7 @@ description: You can find all of our Lozzax wallet releases here
 
 # 📁 Downloads
 
-Need some help using our wallets? Check out the [Lozzax wallet guides](https://docs.lozzax.xyz/using-the-oxen-blockchain/oxen-wallet-guides). You can also find out more about [setting up service nodes](https://docs.Lozzax.xyz/using-the-lozzax-blockchain/lozzax-service-node-guides/full-service-node-setup-guide) and [staking](using-the-lozzax-blockchain/lozzax-service-node-guides/staking-to-shared-service-node.md) from our wallets.
+Need some help using our wallets? Check out the [Lozzax wallet guides](https://docs.lozzax.xyz/using-the-lozzax-blockchain/lozzax-wallet-guides). You can also find out more about [setting up service nodes](https://docs.Lozzax.xyz/using-the-lozzax-blockchain/lozzax-service-node-guides/full-service-node-setup-guide) and [staking](using-the-lozzax-blockchain/lozzax-service-node-guides/staking-to-shared-service-node.md) from our wallets.
 
 ## Lozzax Wallet downloads
 
