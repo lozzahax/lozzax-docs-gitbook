@@ -1,22 +1,18 @@
 ---
 description: >-
-  Lozzax is a complete fork of Oxen platform which focuses on building tools for
-  a more private digital future.
+  Lozzax is a complete fork of the Monero platform and a better
+  privacy foccus coin
 ---
 
 # 💡 Introduction to Lozzax
 
-**Lozzax** is a complete fork of Oxen which is a developer platform for privacy tools. Oxen was our main platform for building Lozzax which totally bears all the features that we solely needed in building our plaform since it has good privacy features, security, decentralisation, and safety.
-
-This blockchain, network, and technology stack that Oxen offered made our works more easier since it offers variety of tools, libraries, and direct end-user products which solve some of the most difficult challenges in the digital security space.
+**Lozzax** is a privacy financial token which is built using the **Monero** Source code which we aim to build our own platform. We are remaining a proof of work coin with fast speed and good mining capability. Transactions using LOZZ is absolutely anonymous with the use of ring signature which means all transaction are not visible to the naked eyes this makes the receivers and senders amount not known publicly. This ideal is the same with the banking systems but more of an improvement of the system. Lozzax also uses same mechanism like Monero to hide the sender and receivers values with help of the Bulletproof as well as the receivers stealth address. With the help of Dandelion++ the Senders Internet Protocol address is also hidden from the naked eyes.
 
 ## Quick navigation
 
 * [Show me how to get an LOZZAX wallet](using-the-lozzax-blockchain/lozzax-wallet-guides/)
-* [Show me how to stake on the LOZZAX network](using-the-lozzax-blockchain/lozzax-service-node-guides/staking-to-shared-service-node.md)
+* [Show me how to mine Lozzax](using-the-lozzax-blockchain/mining/mining-lozzax.md)
 
-For more in-depth information on the components of the Lozzax stack, head over to [Building on Lozzax](building-with-lozzax/).
 
-## NOTE:
 
-* Majority of the writeups are gotten from the Oxen documentary. All Oxen copyrights are maintained. Thanks to all member of the Oxen team particularly `Jagerman`
+
