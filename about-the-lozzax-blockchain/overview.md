@@ -1,17 +1,15 @@
 ---
 description: >-
-  Lozzax is a complete fork of Oxen platform which focuses on building tools for a more private
-  digital future.
+  Lozzax is a complete fork of the Monero platform and a better
+  privacy focus coin
 ---
 
 # 🗺 Overview
 
-Lozzax was fork from [OXEN](https://oxen.io) blockchain with lozzax using majority of Oxen network features like Service node and Lokinet. Our blockchain is maintained by the [Lozzax Service Node network](lozzax-service-nodes.md), a network of blockchain nodes operated by members of the Lozzax community. Running a service node requires [_staking_](../using-the-lozzax-blockchain/lozzax-service-node-guides/staking-to-shared-service-node.md) — which means voluntarily locking — a certain amount of $LOZZAX tokens.
+Lozzax was fork from [Monero](https://getmonero.org) which is a total privacy cryptocurrency and also uses the RandomL algorithm to find blocks which have a reward of **5000 LOZZ** of which Lozzax management reward is pugged at **500 LOZZ** and the rest **4500 LOZZ** for Miners who are dedicating and deploying their Systems for mining purposes.  
 
-The staking requirement to run a service node is currently fixed at **25,000 $LOZZAX** or **6,250 $LOZZAX** for a shared node.
+Transactions using LOZZ as we already know is absolutely anonymous with the use of ring signature which makes all transaction not visible to the naked eyes thereby making the receivers and senders amount private. This ideal is the same with the banking systems but more of an improvement of the system. Lozzax also uses same mechanism like Monero to hide the sender and receivers values with help of the Bulletproof as well as the receivers stealth address. With the help of Dandelion++ the Senders Internet Protocol address is also hidden from the naked eyes
 
-In exchange for maintaining reliable and trustworthy blockchain nodes, node operators periodically receive rewards in the form of $LOZZAX tokens.
 
-The Lozzax blockchain also boasts [Blink](blink-instant-transactions.md) invented by the Oxen team— truly private, instant transactions. Blink allows you to make transactions with all the confidence Monero enthusiasts love, but with a 1 second transaction time. Blink gives $LOZZAX the potential to be used as a true means of value exchange — not just storage — in a way no other coin can match.
 
 
