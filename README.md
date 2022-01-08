@@ -1,7 +1,7 @@
 ---
 description: >-
   Lozzax is a complete fork of the Monero platform and a better
-  privacy foccus coin
+  privacy focus coin
 ---
 
 # 💡 Introduction to Lozzax
@@ -10,7 +10,7 @@ description: >-
 
 ## Quick navigation
 
-* [Show me how to get an LOZZAX wallet](using-the-lozzax-blockchain/lozzax-wallet-guides/)
+* [Show me how to get a LOZZAX wallet](using-the-lozzax-blockchain/lozzax-wallet-guides/)
 * [Show me how to mine Lozzax](using-the-lozzax-blockchain/mining/mining-lozzax.md)
 
 
