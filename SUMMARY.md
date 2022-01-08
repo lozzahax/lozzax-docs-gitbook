@@ -2,8 +2,6 @@
 
 * [🍷 Introduction to Lozzax](README.md)
 * [⛏️ Building with Lozzax](building-with-lozzax/README.md)
-  * [🌐 Lokinet](building-with-lozzax/lokinet.md)
-  * [🔒 Session](building-with-lozzax/session.md)
   * [🥰 Lozzax](building-with-lozzax/lozzax.md)
 * [📥 Downloads](downloads.md)
 * [🆘 Support](support.md)
@@ -12,11 +10,6 @@
 
 * [🗺 Overview](about-the-lozzax-blockchain/overview.md)
 * [🏦 Token economics](about-the-lozzax-blockchain/lozzax-token-economics/README.md)
-  * [🔥 Token burning](about-the-lozzax-blockchain/lozzax-token-economics/token-burning.md)
-* [🖥 Lozzax Service Nodes](about-the-lozzax-blockchain/lozzax-service-nodes.md)
-* [💓 Pulse: PoS on Lozzax](about-the-lozzax-blockchain/pulse-pos-on-lozzax/README.md)
-  * [🤿 Pulse: Deep dive](about-the-lozzax-blockchain/pulse-pos-on-lozzax/pulse-paper.md)
-* [👁 Blink: Instant transactions](about-the-lozzax-blockchain/blink-instant-transactions.md)
 
 ## Using the Lozzax Blockchain
 
@@ -30,37 +23,9 @@
   * [Restoring an Lozzax CLI Wallet from seed](using-the-lozzax-blockchain/lozzax-wallet-guides/restore-cli-from-seed.md)
   * [Restoring an Lozzax CLI Wallet from keys](using-the-lozzax-blockchain/lozzax-wallet-guides/restore-cli-from-keys.md)
   * [Exporting a CSV of your wallet transaction history](using-the-lozzax-blockchain/lozzax-wallet-guides/exporting-a-csv-of-your-wallet-transaction-history.md)
-* [🖥 Service Node guides](using-the-lozzax-blockchain/lozzax-service-node-guides/README.md)
-  * [🏎 Express service node setup guide](using-the-lozzax-blockchain/lozzax-service-node-guides/setting-up-an-lozzax-service-node.md)
-  * [🍺 Full service node setup guide](using-the-lozzax-blockchain/lozzax-service-node-guides/full-service-node-setup-guide.md)
-  * [💸 Staking to a shared Lozzax Service Node](using-the-lozzax-blockchain/lozzax-service-node-guides/staking-to-shared-service-node.md)
-  * [🛑 Service Node deregistration](using-the-lozzax-blockchain/lozzax-service-node-guides/service-node-deregistration.md)
-  * [🛠 Service node tools and upkeep](using-the-lozzax-blockchain/lozzax-service-node-guides/service-node-tools-upkeep.md)
-  * [📱 Mobile Wallet Staking Guide](using-the-lozzax-blockchain/lozzax-service-node-guides/mobile-wallet-staking-guide.md)
-* [🔡 Using Lozzax Name System \(ONS\)](using-the-lozzax-blockchain/using-lozzax-name-system.md)
 * [🤓 Advanced](using-the-lozzax-blockchain/advanced/README.md)
-  * [Service node 📞 RPC calls](using-the-lozzax-blockchain/advanced/service-node-rpc-calls.md)
   * [Daemon 📞 RPC calls](using-the-lozzax-blockchain/advanced/daemon-rpc-calls.md)
   * [Wallet 📞 RPC calls](using-the-lozzax-blockchain/advanced/wallet-rpc-calls.md)
 
 ## Products built on Lozzax
-
-* [🔒 Session](products-built-on-lozzax/session/README.md)
-  * [🔤 Lozzax Name Service for Session](products-built-on-lozzax/session/loki-name-system-for-session.md)
-  * [🏗 Network infrastructure](products-built-on-lozzax/session/network-infrastructure.md)
-  * [✉️ Message routing](products-built-on-lozzax/session/message-routing.md)
-  * [📎 Attachments](products-built-on-lozzax/session/attachments.md)
-  * [🗣 Open group setup](products-built-on-lozzax/session/open-group-setup.md)
-* [🌐 Lokinet](products-built-on-lozzax/lokinet/README.md)
-  * [📚 Guides](products-built-on-lozzax/lokinet/guides/README.md)
-    * [🐧 Installing on Linux \(GUI\)](products-built-on-lozzax/lokinet/guides/linux-gui-install-guide.md)
-    * [🐧 Installing on Linux \(CLI\)](products-built-on-lozzax/lokinet/guides/installing-on-linux-cli.md)
-    * [🐧❗️Linux troubleshooting](products-built-on-lozzax/lokinet/guides/linux-troubleshooting.md)
-    * [🍎 Installing on macOS](products-built-on-lozzax/lokinet/guides/macos-gui-install-guide.md)
-    * [🖥Installing on Windows](products-built-on-lozzax/lokinet/guides/windows-gui-install-guide.md)
-    * [📞 Run a secure Mumble server over Lokinet](products-built-on-lozzax/lokinet/guides/secure-mumble-server-over-lokinet.md)
-  * [👋 Exit nodes](products-built-on-lozzax/lokinet/exit-nodes.md)
-  * [🧑‍💻 SNApps](products-built-on-lozzax/lokinet/snapps/README.md)
-    * [🚀 Accessing SNApps](products-built-on-lozzax/lokinet/snapps/accessing-snapps.md)
-    * [🖥 Hosting SNApps](products-built-on-lozzax/lokinet/snapps/hosting-snapps.md)
 
