@@ -6,7 +6,7 @@ This is a list of the lozzaxd daemon RPC calls, their inputs and outputs, and ex
 
 Many RPC calls use the daemon's JSON RPC interface while others use their own interfaces, as demonstrated below.
 
-Note: "atomic units" refer to the smallest fraction of 1 $LOZZAX according to the lozzaxd implementation. **1 $LOZZAX = 1e12 atomic units.**
+Note: "atomic units" refer to the smallest fraction of 1 $LOZZAX according to the lozzaxd implementation. **1 $LOZZAX = 1e9 atomic units.**
 
 #### JSON RPC Methods:
 
